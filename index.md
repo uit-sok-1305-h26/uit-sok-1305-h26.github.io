@@ -16,7 +16,7 @@ Bedrifter og organisasjoner benytter interne og eksterne data i rapporter, analy
 
 Det anbefales å ha grunnleggende kunnskaper i Python og R. Kurset vil gi en introduksjon til data science, med særlig fokus på anvendelser innen økonomi.
 
-For mer informasjon om kurset, se UiT sin [læringsutbyttebeskrivelse](https://uit.no/utdanning/emner/emne/859436/sok-3023) av kurset.
+For mer informasjon om kurset, se UiT sin [læringsutbyttebeskrivelse](https://uit.no/utdanning/aktivt/emne/SOK-1305) av kurset.
 
 ## Faglærerinfo  
 - [Markus J. Aase](https://uit.no/ansatte/person?p_document_id=844489&p_dimension_id=88163) (fagansvarlig)
