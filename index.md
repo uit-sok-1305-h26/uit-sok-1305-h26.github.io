@@ -8,18 +8,18 @@ Informasjon om eksamen og prosjektet, samt frister og ressurser, finner dere ogs
 - [Eksamen og informasjon om vurdering](eksamen.html){:target="blank"}   
 
 
-[Timeplan](https://timeplan.uit.no/emne_timeplan.php?sem=25v&module=SOK-3023-1){:target="blank"} for faget på UiT sine sider.
+[Timeplan](https://timeplan.uit.no/emne_timeplan.php?sem=25v&module=SOK-3023-1){:target="blank"} for faget på UiT sine sider (OPPDATER).
 
 
 ## Kursbeskrivelse 
-Økonometri har lenge dominert innen økonomi og finans når det gjelder modellering og prediksjon. Likevel har framskritt av maskinlæring gjort at maskinlæringen brukes mer og mer innen økonomi og finans. Dette emnet vil omhandle teknikker som beslutningstrær, nevrale nettverk, bildeklassifisering, bruk av tekstdata, språkmodeller og tidsserie-modeller.
-Undervisningen vil bruke maskinlæringsverktøy i Python, og gi studentene en god innføring i maskinlæring rettet mot samfunnsøkonomiske og finansielle problemstillinger.
+Bedrifter og organisasjoner benytter interne og eksterne data i rapporter, analyser, og til å fatte beslutninger. Datavitenskap, eller data science, er et tverrfaglig felt mellom matematikk, statistikk og informasjonsteknologi - og har blitt viktig innen flere deler av samfunnsøkonomien og finans.
+
+Det anbefales å ha grunnleggende kunnskaper i Python og R. Kurset vil gi en introduksjon til data science, med særlig fokus på anvendelser innen økonomi.
 
 For mer informasjon om kurset, se UiT sin [læringsutbyttebeskrivelse](https://uit.no/utdanning/emner/emne/859436/sok-3023) av kurset.
 
 ## Faglærerinfo  
 - [Markus J. Aase](https://uit.no/ansatte/person?p_document_id=844489&p_dimension_id=88163) (fagansvarlig)
-- [Øystein Myrland](https://uit.no/ansatte/oystein.myrland) (kan bistå på enkelte spørsmål)
 
 I forbindelse med spørsmål til faget, eksamen og prosjektet skal spørsmål henvendes til Markus Aase. 
 
@@ -27,13 +27,15 @@ I forbindelse med spørsmål til faget, eksamen og prosjektet skal spørsmål he
 For henvendelser av administrative art send e-post til: <hhcampus@hjelp.uit.no>. Der får du hjelp av Handelshøgskolens administrasjon.
 
 ## Pensum
-I SOK-3023 *Maskinlæring for økonomer* har vi ingen bok, men vi har følgende pensum:
-* Kompendium designet for dette kurset.
-* Google Colab filer, de finner dere [her](https://github.com/uit-sok-3023-v25/uit-sok-3023-v25.github.io/tree/main/notebooks).
+I SOK-1305 *Statistisk læring for økonomer* har vi følgende pensum:
+* "An introduction to Statistical Learning - with Applications in R". Dere finner boka [her](https://www.statlearning.com/) eller Akademika.
+    * Vi kommer hovedsakelig til å bruke denne boka, da det meste av programmeringen vil foregå i R.
+* "An introduction to Statistical Learning - with Applications in Python". Dere finner boka [her](https://www.statlearning.com/) eller Akademika.
+    * Vi vil bruke denne boka *noe*, da vi vil ha litt om hvordan vi kan programmere i Python.
+* Videoforelesninger knyttet til faget - de finner dere [her](https://www.youtube.com/playlist?list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V)
+    * Ikke alle videoene er relevant for dette kurset, men forelesningsplanen vil linke til de spesifikke videoene vi skal bruke.
+* Kodefiler, som dere finner her [her](https://github.com/uit-sok-1305-h26/uit-sok-1305-h26.github.io/tree/main/notebooks).
 * Fagstoff som er gjennomgått på fysiske forelesningene.
-
-### Om kompendiet
-Kompendiet er litteratur studentene kan støtte seg på til forelesningene og prosjektet. Alt i kompendiet er pensum, og i dette kurset forventes det en del egenstudium.
 
 ## Kunngjøringer  
 Kunngjøringer og beskjeder legges ut i [Canvas](https://uit.instructure.com/){:target="blank"}.
