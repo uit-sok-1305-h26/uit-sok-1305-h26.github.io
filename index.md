@@ -34,8 +34,10 @@ I SOK-1305 *Statistisk læring for økonomer* har vi følgende pensum:
     * Vi vil bruke denne boka *noe*, da vi vil ha litt om hvordan vi kan programmere i Python.
 * Videoforelesninger knyttet til faget - de finner dere [her](https://www.youtube.com/playlist?list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V)
     * Ikke alle videoene er relevant for dette kurset, men forelesningsplanen vil linke til de spesifikke videoene vi skal bruke.
-* Kodefiler, som dere finner her [her](https://github.com/uit-sok-1305-h26/uit-sok-1305-h26.github.io/tree/main/notebooks).
+* Kodefiler, som dere finner [her](https://github.com/uit-sok-1305-h26/uit-sok-1305-h26.github.io/tree/main/notebooks).
 * Fagstoff som er gjennomgått på fysiske forelesningene.
+* For de interesserte, som vil gå enda mer i dybden på statistisk læring - da anbefaler jeg å sjekke ut "The Elements of Statistical Learning" av Hastie, Tibshirani and Friedman, gratis tilgjengelig [her](https://web.stanford.edu/~hastie/ElemStatLearn/).
+
 
 ## Kunngjøringer  
 Kunngjøringer og beskjeder legges ut i [Canvas](https://uit.instructure.com/){:target="blank"}.
