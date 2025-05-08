@@ -77,15 +77,11 @@ Her finner dere tidspunkt for presentasjonene:
 
 | Dato   | Tidspunkt   | Hvem       | Hvor  |
 |-------------|--------------|-----------------|-----------------|
-| 28. feb | 08.15-08.40 | Marius Bjerga og Peder Rønning            | [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDQxOTgwYWQtNDQ2ZS00NWNmLWEyZWEtMTYzYTJiNDE2ZWIw%40thread.v2/0?context=%7b%22Tid%22%3a%224e7f212d-74db-4563-a57b-8ae44ed05526%22%2c%22Oid%22%3a%223bc84fca-f258-43d8-abc9-a2db6ea0ad08%22%7d) |
-| 28. feb | 08.40-09.05 | Peder Hognestad og Erlend Olsen           | [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDQxOTgwYWQtNDQ2ZS00NWNmLWEyZWEtMTYzYTJiNDE2ZWIw%40thread.v2/0?context=%7b%22Tid%22%3a%224e7f212d-74db-4563-a57b-8ae44ed05526%22%2c%22Oid%22%3a%223bc84fca-f258-43d8-abc9-a2db6ea0ad08%22%7d) |
-| 28. feb | 09.05-09.30 | Ida Bergland og Markus Mollatt            | [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDQxOTgwYWQtNDQ2ZS00NWNmLWEyZWEtMTYzYTJiNDE2ZWIw%40thread.v2/0?context=%7b%22Tid%22%3a%224e7f212d-74db-4563-a57b-8ae44ed05526%22%2c%22Oid%22%3a%223bc84fca-f258-43d8-abc9-a2db6ea0ad08%22%7d) |
-| 28. feb | 09.30-09.55 | Kristina Karlsen                          | [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDQxOTgwYWQtNDQ2ZS00NWNmLWEyZWEtMTYzYTJiNDE2ZWIw%40thread.v2/0?context=%7b%22Tid%22%3a%224e7f212d-74db-4563-a57b-8ae44ed05526%22%2c%22Oid%22%3a%223bc84fca-f258-43d8-abc9-a2db6ea0ad08%22%7d) |
-| 28. feb | 09.55-10.20 | Jacob Eriksen og Amund Bech               | [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDQxOTgwYWQtNDQ2ZS00NWNmLWEyZWEtMTYzYTJiNDE2ZWIw%40thread.v2/0?context=%7b%22Tid%22%3a%224e7f212d-74db-4563-a57b-8ae44ed05526%22%2c%22Oid%22%3a%223bc84fca-f258-43d8-abc9-a2db6ea0ad08%22%7d) |
-| 28. feb | 10.20-10.45 | Kenneth Benonisen og Tore Birkelund       | [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDQxOTgwYWQtNDQ2ZS00NWNmLWEyZWEtMTYzYTJiNDE2ZWIw%40thread.v2/0?context=%7b%22Tid%22%3a%224e7f212d-74db-4563-a57b-8ae44ed05526%22%2c%22Oid%22%3a%223bc84fca-f258-43d8-abc9-a2db6ea0ad08%22%7d) |
-| 28. feb | 10.45-11.10 | Torkil Moen                               | [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDQxOTgwYWQtNDQ2ZS00NWNmLWEyZWEtMTYzYTJiNDE2ZWIw%40thread.v2/0?context=%7b%22Tid%22%3a%224e7f212d-74db-4563-a57b-8ae44ed05526%22%2c%22Oid%22%3a%223bc84fca-f258-43d8-abc9-a2db6ea0ad08%22%7d) |
-| 28. feb | 11.10-11.35 | Maryam Javed og Erlend Øverli             | [Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDQxOTgwYWQtNDQ2ZS00NWNmLWEyZWEtMTYzYTJiNDE2ZWIw%40thread.v2/0?context=%7b%22Tid%22%3a%224e7f212d-74db-4563-a57b-8ae44ed05526%22%2c%22Oid%22%3a%223bc84fca-f258-43d8-abc9-a2db6ea0ad08%22%7d) |
-
+|xx.xx |kl. xx:xx|kommer|kommer|
+|xx.xx |kl. xx:xx|kommer|kommer|
+|xx.xx |kl. xx:xx|kommer|kommer|
+|xx.xx |kl. xx:xx|kommer|kommer|
+|xx.xx |kl. xx:xx|kommer|kommer|
 
 
 Legg merke til at disse er **digitale**, trykk på lenken for å *gå inn* i Teams-rommet. Ønsker dere fysisk, ta kontakt så kan vi ta det på 24., 25. eller 26. februar!
