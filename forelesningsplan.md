@@ -11,7 +11,6 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 |xx.xx.2026  xx:15-xx:00    |Tromsø  |Introduksjon til statistisk læring |Forelesning|[Om kurset](https://www.youtube.com/watch?v=LvySJGj-88U&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=1&pp=iAQB)/[Eksempler](https://www.youtube.com/watch?v=B9s8rpdNxU0&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=3)|
 |xx.xx.2026  xx:15-xx:00    |Tromsø  |Introduksjon til ML #1 - del 2 |Forelesning|--------------------|
 |xx.xx.2026  xx:15-xx:00    |Tromsø  |Intro til ML, spørsmål, oppgaver |Seminar|--------------------|
-
 |xx.xx.2016  14:00    |Tromsø  |INNLEVERING AV PROSJEKT |[Wiseflow innlevering](https://europe.wiseflow.net/participant/) |
 |xx.xx.2026  xx:15-xx:00    |Tromsø  |Spørretime |Forberedelse til muntlig eksamen |--------------------|
 |xx.xx.2026  xx:15-xx:00    |Tromsø  |Spørretime |Forberedelse til muntlig eksamen |--------------------|
