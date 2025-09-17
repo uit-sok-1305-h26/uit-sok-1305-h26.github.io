@@ -29,14 +29,13 @@ For henvendelser av administrative art send e-post til: <hhcampus@hjelp.uit.no>.
 ## Pensum
 I SOK-1305 *Statistisk læring for økonomer* har vi følgende pensum:
 * "An introduction to Statistical Learning - with Applications in R". Dere finner boka [her](https://www.statlearning.com/) eller Akademika.
-    * Vi kommer hovedsakelig til å bruke denne boka, da det meste av programmeringen vil foregå i R.
 * "An introduction to Statistical Learning - with Applications in Python". Dere finner boka [her](https://www.statlearning.com/) eller Akademika.
-    * Vi vil bruke denne boka *noe*, da vi vil ha litt om hvordan vi kan programmere i Python.
+     * Hvilken av bøkene over dere bruker, avhenger av om dere ønsker å bruke Python eller R på prosjektet.
 * Videoforelesninger knyttet til faget - de finner dere [her](https://www.youtube.com/playlist?list=PLOg0ngHtcqbPTlZzRHA2ocQZqB1D_qZ5V)
     * Ikke alle videoene er relevant for dette kurset, men forelesningsplanen vil linke til de spesifikke videoene vi skal bruke.
 * Kodefiler, som dere finner [her](https://github.com/uit-sok-1305-h26/uit-sok-1305-h26.github.io/tree/main/notebooks).
-* Fagstoff som er gjennomgått på fysiske forelesningene.
-* For de interesserte, som vil gå enda mer i dybden på statistisk læring - da anbefaler jeg å sjekke ut "The Elements of Statistical Learning" av Hastie, Tibshirani and Friedman, gratis tilgjengelig [her](https://web.stanford.edu/~hastie/ElemStatLearn/).
+* Pensum, om konseptene i faget, blir gjennomgått på de *fysiske* forelesningene.
+* For de interesserte, som vil gå enda mer i dybden på statistisk læring - da anbefaler jeg å sjekke ut *The Elements of Statistical Learning* av Hastie, Tibshirani and Friedman, gratis tilgjengelig [her](https://web.stanford.edu/~hastie/ElemStatLearn/).
 
 
 ## Kunngjøringer  
@@ -45,6 +44,6 @@ Kunngjøringer og beskjeder legges ut i [Canvas](https://uit.instructure.com/){:
 ## Innlevering og eksamen  
 Kurset består av ett arbeidskrav, en presentasjon av prosjektbeskrivelse, som vurderes godkjent/ikke-godkjent. 
 
-Det som blir karaktergivende er et prosjekt (i gruppestørrelse 1-2) og en muntlig eksamen, hvor begge vektes 50%. Dette danner grunnlag for karakter A-E, F er stryk.
+Det som blir karaktergivende er et prosjekt (i gruppestørrelse 1-2) (teller 40%) og en muntlig eksamen (teller 60%). Dere vil få karakter på hver av delene,  karakter A-E, F er stryk. Til slutt slås de to karakterene sammen, til en endelig karakter.
 
 Frister og oppgaver finnes [her](eksamen.html){:target="blank"}.    
