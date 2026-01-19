@@ -8,9 +8,9 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 
 | Tid            | Sted            | Tema               |Type               | Video  | Pensum 
 |----------------|-----------------|--------------------|--------------------|--------------------|--------------------|
-|18.08.2026  10:15-12:00    |Tromsø  |Introduksjon til statistisk læring |Forelesning|[Om kurset](https://www.youtube.com/watch?v=LvySJGj-88U&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=1&pp=iAQB)/[Eksempler](https://www.youtube.com/watch?v=B9s8rpdNxU0&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=3)|Kapittel 1|
+|18.08.2026  10:15-12:00    |Tromsø  |Velkommen, og hva er statistisk læring? |Forelesning|[Om kurset](https://www.youtube.com/watch?v=LvySJGj-88U&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=1&pp=iAQB)/[Eksempler](https://www.youtube.com/watch?v=B9s8rpdNxU0&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=3)|Kapittel 1|
 |20.08.2026  12:15-14:00    |Tromsø  |Introduksjon til statistisk læring |Forelesning|--------------------|Kapittel 2|
-|21.08.2026  12:15-14:00    |Tromsø  |Introduksjon til statistisk læring |Seminar|--------------------|Oppgaveark|
+|21.08.2026  12:15-14:00    |Tromsø  |Intro. til statistisk læring |Seminar|--------------------|Oppgaveark|
 |25.08.2026  10:15-12:00    |Tromsø  |Lineær regresjon |Forelesning|--------------------|Kapittel 3|
 |27.08.2026  08:15-10:00    |Tromsø  |Multippel regresjon |Forelesning|--------------------|Kapittel 3|
 |27.08.2026  10:15-12:00    |Tromsø  |Regresjon og prediksjon vs inferens |Seminar|--------------------|Oppgaveark|
@@ -19,7 +19,7 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 |04.09.2026  10:15-12:00    |Tromsø  |Klassifikasjon |Seminar|--------------------|Oppgaveark|
 |08.09.2026  12:15-14:00    |Tromsø  |Resampling-teknikker|Forelesning|--------------------|Kapittel 5|
 |10.09.2026  08:15-10:00    |Tromsø  |Kryssvalidering og bootstrapping |Forelesning|--------------------|Kapittel 5|
-|11.09.2026  08:15-10:00    |Tromsø  |Klassifikasjon |Seminar|--------------------|Oppgaveark|
+|11.09.2026  08:15-10:00    |Tromsø  |CV, LOOCV, bootstrap |Seminar|--------------------|Oppgaveark|
 |14.09.2026  10:15-12:00    |Tromsø  |Beslutningstrær, pruning|Forelesning|--------------------|Kapittel 8|
 |14.09.2016  10:00    |Tromsø  |UTLEVERING AV PROSJEKTARBEID |[Wiseflow innlevering](https://europe.wiseflow.net/participant/) |--------------------|--------------------|
 |Opptak    |Video  |Bagging, Random Forests og Boosting |Forelesning|--------------------|Kapittel 8|
