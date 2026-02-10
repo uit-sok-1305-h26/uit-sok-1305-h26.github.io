@@ -17,16 +17,15 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 |01.09.2026  08:15-10:00    |Tromsø  |Forelesning 5: Klassifikasjon vs regresjon|Forelesning|[Klassifikasjon](https://www.youtube.com/watch?v=ju3J7iRy6xI&list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ&index=21)|--------------------|
 |03.09.2026  08:15-10:00    |Tromsø  |Forelesning 6: Logistisk regresjon |[Logistisk regresjon](https://www.youtube.com/watch?v=kr_Be9NVXOM&list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ&index=22)/[Flervariabel log. reg.](https://www.youtube.com/watch?v=1uJVE8bkabc&list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ&index=23)|--------------------|
 |04.09.2026  10:15-12:00    |Tromsø  |Seminar 3: Klassifikasjon |[Viktige spørsmål](https://www.youtube.com/watch?v=50sv4UTjE90&list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ&index=16)|--------------------|
-|08.09.2026  12:15-14:00    |Tromsø  |Forelesning 7:Resampling-teknikker|--------------------|Kapittel 5|--------------------|
-|10.09.2026  08:15-10:00    |Tromsø  |Forelesning 8: Kryssvalidering og bootstrapping |--------------------|Kapittel 5|--------------------|
+|08.09.2026  12:15-14:00    |Tromsø  |Forelesning 7:Resampling-teknikker, kryssvalidering og bootstrap|--------------------|Kapittel 5|--------------------|
+|10.09.2026  08:15-10:00    |Tromsø  |Forelesning 8: Beslutningstrær, pruning|--------------------|Kapittel 8|--------------------|
 |11.09.2026  08:15-10:00    |Tromsø  |Seminar 4: CV, LOOCV, bootstrap |--------------------|Oppgaveark|--------------------|
-|14.09.2026  10:15-12:00    |Tromsø  |Forelesning 9: Beslutningstrær, pruning|--------------------|Kapittel 8|--------------------|
+|14.09.2026  10:15-12:00    |Tromsø  |Forelesning 9: Bagging, Random Forests og Boosting |--------------------|Kapittel 8|--------------------|
 |14.09.2016  10:00    |Tromsø  |UTLEVERING AV PROSJEKTARBEID |[Beskrivelse](https://uit-sok-1305-h26.github.io/prosjekt.html) |  |--------------------|
 |Opptak    |Video  |Forelesning 10: Bagging, Random Forests og Boosting |--------------------|Kapittel 8|--------------------|
-|Opptak    |Video  |Forelesning 11: Bagging, Random Forests og Boosting |--------------------|Kapittel 8|--------------------|
 |22.09.2026  10:15-12:00    |Seminar 5: Oppgaver  |Klassifikasjon |--------------------|Oppgaveark|--------------------|
-|01.10.2026  10:15-12:00    |Tromsø  |Forelesning 12: Support vector machines |--------------------|Kapittel 9|--------------------|
-|07.10.2026  10:15-12:00    |Tromsø  |Forelesning 13: SVM, SVC, hyperplan |--------------------|Kapittel 9|--------------------|
+|01.10.2026  10:15-12:00    |Tromsø  |Forelesning 11: Support vector machines |--------------------|Kapittel 9|--------------------|
+|07.10.2026  10:15-12:00    |Tromsø  |Forelesning 12: SVM, SVC, hyperplan |--------------------|Kapittel 9|--------------------|
 |xx.xx.2026  xx:15-xx:00    |Tromsø  |Seminar 6: SVM og lignende |--------------------|Oppgaveark|--------------------|
 |Uke 42    |Tromsø  |Egenstudium, prosjektarbeid |--------------------|-----|--------------------|
 |Uke 43    |Tromsø  |Egenstudium, prosjektarbeid |--------------------|-----|--------------------|
