@@ -22,7 +22,7 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 | 11.09.2026 08:15-10:00 | Tromsø | Seminar 4: CV, LOOCV, bootstrap  |    |        | Oppgaveark   |         |
 | 14.09.2026 10:15-12:00 | Tromsø | Forelesning 9: Bagging, Random Forests og Boosting      |      | Video kommer       | Kapittel 8   |         |
 | 14.09.2016 10:00      | Tromsø | UTLEVERING AV PROSJEKTARBEID    | [Beskrivelse](https://uit-sok-1305-h26.github.io/prosjekt.html)  |   |    |    |
-| Opptak                | Video  | Forelesning 10: Bagging, Random Forests og Boosting     |       | Video kommer      | Kapittel 8   |         |
+| Opptak                | Opptak  | Forelesning 10: Bagging, Random Forests og Boosting     |       | Video kommer      | Kapittel 8   |         |
 | 22.09.2026 10:15-12:00 | Tromsø | Seminar 5: Oppgaver   |   |   | Oppgaveark   |         |
 | 01.10.2026 10:15-12:00 | Tromsø | Forelesning 11: Support vector machines   |   | Video kommer   | Kapittel 9   |         |
 | 07.10.2026 10:15-12:00 | Tromsø | Forelesning 12: SVM, SVC, hyperplan  |    | Video kommer    | Kapittel 9   |         |
