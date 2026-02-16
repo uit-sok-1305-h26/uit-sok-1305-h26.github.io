@@ -23,9 +23,9 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 | 14.09.2026 10:15-12:00 | Tromsø | Forelesning 9: Bagging, Random Forests og Boosting      |      | Video kommer       | Kapittel 8   |         |
 | 14.09.2016 10:00      | Tromsø | UTLEVERING AV PROSJEKTARBEID    | [Beskrivelse](https://uit-sok-1305-h26.github.io/prosjekt.html)  |   |    |    |
 | Opptak                | Opptak  | Forelesning 10: Bagging, Random Forests og Boosting     |       | Video kommer      | Kapittel 8   |         |
-| 22.09.2026 10:15-12:00 | Tromsø | Seminar 5: Oppgaver   |   |   | Oppgaveark   |         |
-| 01.10.2026 10:15-12:00 | Tromsø | Forelesning 11: Support vector machines   |   | Video kommer   | Kapittel 9   |         |
-| 07.10.2026 10:15-12:00 | Tromsø | Forelesning 12: SVM, SVC, hyperplan  |    | Video kommer    | Kapittel 9   |         |
+| EGENSTUDIUM | Tromsø | Seminar 5: Oppgaver   |   |   | Oppgaveark   |         |
+| 01.10.2026 10:15-12:00 | Tromsø (Ekstern foreleser) | Forelesning 11: Support vector machines   |   | Video kommer   | Kapittel 9   |         |
+| 07.10.2026 10:15-12:00 | Tromsø (Ekstern foreleser) | Forelesning 12: SVM, SVC, hyperplan  |    | Video kommer    | Kapittel 9   |         |
 | xx.xx.2026 xx:15-xx:00 | Tromsø | Seminar 6: SVM og lignende   |    |      | Oppgaveark   |         |
 | Uke 42  | Tromsø | Egenstudium, prosjektarbeid     |          |          |         |     |
 | Uke 43    | Tromsø | Egenstudium, prosjektarbeid   |          |          |         |     |
