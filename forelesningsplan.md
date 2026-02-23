@@ -9,7 +9,7 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 | Tid  | Sted   | Tema | Video (fra forfatter) | Video (fra foreleser)| Pensum   | Notater |
 |------|--------|------|-----------------------|----------------------|----------|---------|
 | 18.08.2026 10:15-12:00 | Tromsø | Forelesning 1: Intro til faget  | [Om kurset](https://www.youtube.com/watch?v=LvySJGj-88U&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=1&pp=iAQB)/[Eksempler](https://www.youtube.com/watch?v=B9s8rpdNxU0&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=3) | [Videoforelesning](https://youtu.be/hS21rZzSQEY) | Kapittel 1   |         |
-| 20.08.2026 12:15-14:00 | Tromsø | Forelesning 2: Introduksjon til statistisk læring | [Intro til regresjonsmodeller](https://www.youtube.com/watch?v=ox0cKk7h4o0&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=4)| Video kommer  | Kapittel 2   |         |
+| 20.08.2026 12:15-14:00 | Tromsø | Forelesning 2: Introduksjon til statistisk læring | [Intro til regresjonsmodeller](https://www.youtube.com/watch?v=ox0cKk7h4o0&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=4)| [Videoforelesning](https://youtu.be/8ci1d74pROI)  | Kapittel 2   |         |
 | 21.08.2026 12:15-14:00 | Tromsø | Seminar 1: Intro. til statistisk læring  |    |  | Oppgaveark   |         |
 | 25.08.2026 10:15-12:00 | Tromsø | Forelesning 3: Lineær regresjon | [Lin.reg.](https://www.youtube.com/watch?v=vCHtY6Me5FI&list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ&index=13) | Video kommer | Kapittel 3   |       |
 | 27.08.2026 08:15-10:00 | Tromsø | Forelesning 4: Multippel regresjon| [Mult. lin. reg.](https://www.youtube.com/watch?v=o9hoLdylWKo&list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ&index=15)  | Video kommer | Kapittel 3   |  |
