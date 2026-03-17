@@ -24,9 +24,9 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 | 14.09.2016 10:00      | Tromsø | UTLEVERING AV PROSJEKTARBEID    | [Beskrivelse](https://uit-sok-1305-h26.github.io/prosjekt.html)  |   |    |    |
 | Opptak                | Opptak  | Forelesning 10: Bagging, Random Forests og Boosting     |       | Video kommer      | Kapittel 8   |         |
 | EGENSTUDIUM | Tromsø | Seminar 5: Oppgaver   | [Koding med tre-baserte metoder](https://youtu.be/AVTfC5WnDTo?si=mfpFdoQKN6S6upto)  |   | Oppgaveark   |         |
-| 01.10.2026 10:15-12:00 | Tromsø (Ekstern foreleser) | Forelesning 11: Support vector machines   |   | Video kommer   | Kapittel 9   |         |
-| 07.10.2026 10:15-12:00 | Tromsø (Ekstern foreleser) | Forelesning 12: SVM, SVC, hyperplan  |    | Video kommer    | Kapittel 9   |         |
-| xx.xx.2026 xx:15-xx:00 | Tromsø | Seminar 6: SVM og lignende   |    |      | Oppgaveark   |         |
+| 01.10.2026 10:15-12:00 | Tromsø (Ekstern foreleser) | Forelesning 11: Support vector machines   | [Hyperplan](https://youtu.be/Op0OyOuDjcQ?si=g7G7pz9_EhyuJIxe)  | Video kommer   | Kapittel 9   |         |
+| 07.10.2026 10:15-12:00 | Tromsø (Ekstern foreleser) | Forelesning 12: SVM, SVC, hyperplan  | [Support Vector Machines](https://youtu.be/pjvnCEfAswc?si=QaYrGEifMhmmi_iK) / [Feature expansion](https://youtu.be/02icdqOJsH4?si=21oGx-j7PkpAu6mh) / [SVM vs Logistisk Regresjon](https://youtu.be/m5d7-URGnVY?si=HVArWkaVEuDU2W54)  | Video kommer    | Kapittel 9   |         |
+| xx.xx.2026 xx:15-xx:00 | Tromsø | Seminar 6: SVM og lignende   | [SVM koding](https://youtu.be/94wKFGS4Zm4?si=Vc6GCANxmQOfK_gZ)   |      | Oppgaveark   |         |
 | Uke 42  | Tromsø | Egenstudium, prosjektarbeid     |          |          |         |     |
 | Uke 43    | Tromsø | Egenstudium, prosjektarbeid   |          |          |         |     |
 | 15.11.2026 14:00      | Tromsø | INNLEVERING AV PROSJEKT      | [Wiseflow innlevering](https://europe.wiseflow.net/participant/) |    |   |   |
