@@ -1,104 +1,87 @@
 {% include navbar.html %}{% include top-box.html %}
-# Prosjekt (Oppdater)
-I dette kurset skal vi ha et maskinlæringsprosjekt, hvor dere vil bli utfordret på å lage egne maskinlæringsmodeller. Dere skal gjennomføre arbeidet **enten** alene, eller i gruppe på to.
+# Prosjekt: Statistisk Læring (SOK-1305)
 
-## Oppgave 🎯📊
-Dere skal utforske og sammenligne maskinlæringsmodeller på et selvvalgt eller anbefalt datasett. Målet er å analysere hvordan ulike teknikker presterer på problemstillingen dere velger.  
+I dette faget skal vi ha et praktisk data science- og maskinlæringsprosjekt, hvor dere vil bli utfordret på å bygge, evaluere og tolke egne modeller. Dere skal gjennomføre arbeidet enten alene, eller i en gruppe på to.
 
-### 🔍 Maskinlæringsteknikker  
-Dere skal bruke minst én **dyplæringsteknikk** som:  
-- Nevrale nettverk  
-- CNN (Convolutional Neural Networks)  
-- LSTM (Long Short-Term Memory)  
-- Whisper-modellen 
-  
-Alle teknikkene over, går under feltet *dyplæring*. Dyplæring **skal** inkluderes i prosjektet. 
+## 🎯📊 Oppgave
+Dere skal utforske og sammenligne statistiske læringsmetoder og maskinlæringsmodeller på et selvvalgt eller anbefalt datasett (gjerne med en økonomisk vinkling). Målet er å analysere hvordan ulike teknikker presterer på den valgte problemstillingen, med sterk forankring i pensum og **ISLP-boka** (*Introduction to Statistical Learning with Applications in Python*).
 
-I tillegg, kan dere sammenligne dyplæring med mindre komplekse modeller som:  
-- Lineær regresjon  
-- Logistisk regresjon  
-- Beslutningstrær (Decision Trees, Random Forests, Boosting)
-- Dere har lov til å introdusere andre maskinlæringsteknikker dere finner på egen hånd, **om dere vil**.
+### 🔍 Metoder og Statistisk Læring
+Prosjektet skal vise at dere behersker sentrale konsepter fra statistisk læring. Dere skal bruke **minst én to teknikker fra pensum**, som for eksempel:
+- **Trebaserte metoder:** Random Forests, Bagging eller Boosting.
+- **Reguleringsteknikker:** Ridge- og Lasso-regresjon.
+- **Support Vector Machines (SVM).**
+- **Lineær regrejson**: Enkel og multippel
+- **Logitistisk regresjon**
 
-**Husk:** Mer komplekse modeller er ikke alltid best! Dere skal evaluere modellene basert på deres ytelse og relevans for problemstillingen.  
+For å etablere et referansepunkt for ytelsen, **skal** dere sammenligne den avanserte metoden med mer grunnleggende og tolkbare modeller (baseline-modeller), slik som:
+- Lineær regresjon (Multiple Linear Regression)
+- Logistisk regresjon
+- Enkle beslutningstrær (Decision Trees)
 
-### 📂 Krav til prosjektet
-Jeg har funnet frem en del eksempel-datasett dere *kan* (les kan, **ikke må**) bruke. De finner dere lenke til nederst på siden her.
+**Husk:** Mer komplekse modeller er ikke alltid best! Ta hensyn til *Bias-Variance Trade-off*, og evaluer modellene basert på deres evne til å predikere usette data (testdata) versus hvor lett det er å tolke resultatene (*Prediction vs. Inference*).
 
-Dere står fritt til å velge datasett selv, som dere finner på Internett. Det kan f.eks. være fra Yahoo finance, Kaggle, SSB eller andre sider som har data. Uansett hvilke data dere bruker, så **må** dere oppgi dets kilde!
+## 📂 Krav til prosjektet
 
-Det er ganske åpne rammer for oppgaven, men oppgaven har følgende krav:
+Jeg har funnet frem en del eksempel-datasett dere kan (les: *kan*, ikke *må*) bruke. Lenke til disse finner dere nederst på siden. Dere står også fritt til å velge datasett selv (f.eks. fra Yahoo Finance, Kaggle, SSB, osv.). **Uansett hvilke data dere bruker, må opphav og kilde oppgis!**
 
-1. **Datasett og problemstilling**
-   - Velg et datasett (selv eller fra gitte eksempel-datasett).
-   - Beskriv datasettet, dets kilde og hva dere ønsker å analysere.
-    
-2. **Dataforståelse og preprosessering**  
-   - Utforsk datasettet (statistikk, visualiseringer, etc.).  
-   - Gjør nødvendige transformasjoner (håndtere manglende verdier, normalisering, etc.).  
+Oppgaven har ganske åpne rammer, men stiller følgende formelle krav:
 
-3. **Implementasjon av modeller**  
-   - Bruk minst én dyplæringsteknikk og sammenlign gjerne med andre modeller (som nevnt over).
-       * Det er bare positivt om dere gjør egne valg, og gjør en grundig analyse.  
-   - Koden skal være godt kommentert og forklart!!!  
+### 1. Datasett og problemstilling
+- Velg et datasett.
+- Beskriv datasettet, kilden, og definer problemet klart. (Hva er responsvariabelen $Y$, og hva er prediktorene $X$?). Er det et *klassifiserings-* eller *regresjonsproblem*?
 
-4. **Evaluering av modellene**  
-   - Bruk relevante evalueringsmetrikker som MSE, RMSE, Accuracy, F1-score, etc.
-       * Her er lista lang, og opp til dere hvilke metrikk som gir mest mening å benytte seg av.  
-   - Sammenlign modellene basert på ytelse og generaliseringsevne.  
+### 2. Dataforståelse og preprosessering (Koding)
+- Utforsk datasettet gjennom deskriptiv statistikk og visualiseringer.
+- Gjør nødvendige transformasjoner i Python/R: håndter manglende verdier, lag dummy-variabler for kategoriske data, og gjennomfør skalering/standardisering.
 
-5. **Matematisk beskrivelse av modellene**  
-   - Bruk LaTeX i Markdown for å forklare de matematiske konseptene.  
-   - For eksempel kan input-lag til første skjulte lag i et nevralt nettverk beskrives noe som dette:  
-     $\mathbf{a^{(1)}} = \sigma(\mathbf{W} \mathbf{a^{(0)}} + \mathbf{b})$
+### 3. Implementasjon av modeller (Python)
+- Bruk Python-biblioteker fra ISLP (som `scikit-learn`, `statsmodels` eller lignende).
+- Sørg for "riktig" oppdeling av data i trenings- og testsett. Implementer gjerne teknikker som kryssvalidering (*Cross-Validation*), og forklar hvorfor du gjør som du gjør.
+- **Koden skal være godt kommentert og forklart!** Forklar *hvorfor* dere gjør som dere gjør, ikke bare *hva* koden gjør.
 
-6. **Konklusjon og refleksjon**  
-   - Hvilken modell presterte best? Hvorfor?  
-   - Hvordan kan modellen forbedres?  
-   - Hva kan resultatene brukes til i praksis?
-   - Også videre, også videre. 
+### 4. Matematisk og statistisk beskrivelse
+Bruk **LaTeX i Markdown** for å forklare den matematiske intuisjonen og konseptene bak modellene dere benytter.
+- For lineær regresjon (OLS) kan estimatoren f.eks. uttrykkes slik:
+  $$\hat{\beta} = (X^T X)^{-1} X^T y$$
 
-7. **Format og innlevering**  
-   - Prosjektet **skal** leveres som en **Jupyter Notebook (`.ipynb`)**.  
-   - Det skal kunne kjøres i **Google Colab** uten eksterne avhengigheter.
-   - Legg ved datasettet!
-   - Husk å oppgi en **kildeliste** for datasett og litteratur, bruk APA 7 referansestil.
+### 5. Evaluering av modellene
+- Bruk relevante evalueringsmetrikker: $R^2$, MSE, RMSE (regresjon) eller Accuracy, Precision, Recall, F1-score, confusion-matrix (klassifisering).
+- Sammenlign modellene. Vurder graden av generaliseringsevne, og diskuter om det er tegn til under- eller overtilpassing (*overfitting*).
 
-### 🎙️ Presentasjon av prosjektbeskrivelse
-Dere skal presentere prosjektet før det starter ordentlig. Dette er for å demonstrere hva dere har tenkt til å gjennomføre, fremdriftsplan og hvilke data dere velger å se på. Dette skjer fredag 28. februar 2025, mellom 08.15-14.00 (Skulle noen ønske *tidligere*, så ta det opp med fagansvarlig i forelesning/mail).
-
-- Presentasjonen skal være i 5-10 minutter, etterfulgt av 5 minutter med spørsmål/diskusjon.
-- Dere skal vise frem valgte data, problemstilling og initielle tanker for prosjektet. Dette kan presenteres ved hjelp av Notebooks, PowerPoint eller en kombinasjon av PowerPoint/Notebooks.
-- Målet med presentasjonen er at dere har satt dere et passende mål, problemstilling, datasett og eventuelle spørsmål.
-- Vurderes som Godkjent/Ikke-godkjent.
-
-#### Tidspunkt for presentasjoner
-Her finner dere tidspunkt for presentasjonene:
-
-| Dato   | Tidspunkt   | Hvem       | Hvor  |
-|-------------|--------------|-----------------|-----------------|
-|xx.xx |kl. xx:xx|kommer|kommer|
-|xx.xx |kl. xx:xx|kommer|kommer|
-|xx.xx |kl. xx:xx|kommer|kommer|
-|xx.xx |kl. xx:xx|kommer|kommer|
-|xx.xx |kl. xx:xx|kommer|kommer|
+### 6. Konklusjon og refleksjon
+- Hvilken modell presterte best på testdata, og hvorfor?
+- Hvordan kan modellen eventuelt forbedres?
+- Hva kan disse resultatene brukes til i praksis i en bedriftsøkonomisk eller samfunnsøkonomisk kontekst?
 
 
-Legg merke til at disse er **digitale**, trykk på lenken for å *gå inn* i Teams-rommet. Ønsker dere fysisk, ta kontakt så kan vi ta det på 24., 25. eller 26. februar!
+## 📝 Format og innlevering
+- Prosjektet skal leveres som en **Jupyter Notebook (`.ipynb`)** eller **R-markdown (`.rmd`)**, avhengig av om du vil bruke Python eller R.
+- Notebooken skal kunne kjøres direkte i **Google Colab** uten behov for eksterne avhengigheter (husk å importere alt av biblioteker i toppen av dokumentet). Eller i RStudio.
+- Legg ved datasettet!
+- Bruk **APA 7** referansestil for datasett, litteratur og kode dere har hentet inspirasjon fra.
 
-### 📚 Vurdering av oppgaven
-Denne semesteroppgaven teller 50% av karakteren. Dere vil få karakter A-F, og det vurderes ut i fra følgende:
+## 📚 Vurdering av oppgaven
+Denne semesteroppgaven teller **40% av den endelige karakteren** i emnet. Det gis en bokstavkarakter (A-F), som vurderes ut ifra følgende kriterier:
 
-* Forståelse av maskinlæring, teknikkene dere bruker, hva dere har gjort og hvordan dette **formidles** i oppgaven.
-* Hvordan problemstillingen er besvart.
-* Struktur og tydelig kommunikasjon
-* Å vise breddeforståelse for fagfeltet maskinlæring, som gjerne trekker inn samfunnsøkonomi, teller positivt.
-* Det er lov å bruke AI som et hjelpemiddel, for å få hjelp med koding, forståelse etc. - men ting **skal** være formidlet med egne ord. For det første er det juks, og for det andre, hvis man blir tatt, kan det føre til utestengelse.
-* Dere har god tid på prosjektet, og skal leveres 7. mai kl. 14:00 på [Wiseflow](https://europe.wiseflow.net/participant/). Her kan dere laste opp totalt **5 filer**, hvor dere **skal** laste opp en `.ipynb` fil og datasettet dere bruker (f.eks. `.xlsx` eller `.csv` fil). I tillegg, *kan* dere laste opp oppgaven som pdf, legge ved eventuelle vedlegg, og/eller andre relevante filer.
+1. **Faglig forståelse:** Forståelse av statistisk læring, algoritmene og de matematiske egenskapene deres, forankret i pensum (ISLP).
+2. **Koding og implementasjon:** At datahåndteringen og kodekvaliteten er ryddig, logisk og godt kommentert.
+3. **Problemløsning og diskusjon:** Hvordan problemstillingen er besvart, struktur i oppgaven, og refleksjon rundt funn.
+4. **Tverrfaglighet:** Å vise en bredere forståelse for anvendelse av maskinlæring i økonomi og samfunn teller svært positivt.
 
-**Husk:** Det er ikke om accuracy til modellen er 100% eller ikke, som bestemmer om dere har levert en god oppgave. Det er ikke alltid mulig å få det til på test data, da vi ikke alltid har perfekt data. En god oppgave tar hensyr til kravene, viser forståelse, refleksjon og at dere tar i bruk maskinlæring på en fornuftig måte.
+**Bruk av Kunstig Intelligens (KI / AI):**
+Det er tillatt å bruke AI som et hjelpemiddel (til koding, retting av feil og begrepsforståelse). Men ting skal formidles med **egne ord**, og dere skal forstå den matematiske teorien og koden som leveres. Å la en KI skrive avsnitt, drøfte for deg eller levere kode du ikke kan redegjøre for er juks, og kan føre til utestengelse.
+
+**Innleveringsfrist:** 23. november kl. 14:00 på Wiseflow.
+- Her kan dere laste opp totalt 5 filer. 
+- Må inneholde: En `.ipynb`-fil og datasettet deres (`.xlsx`, `.csv` e.l.). 
+- Husk: pdf-versjon av oppgaven eller andre aktuelle vedlegg.
+
+**Siste huskeregel:** Formålet er ikke at modellen skal oppnå 100 % *accuracy* (det indikerer ofte *data leakage* på ekte data). Det som skiller en god og en dårlig oppgave, er evnen til å vise statistisk forståelse, drøfte begrensninger i metoden og bruke statistisk læring på en gjennomtenkt og fornuftig måte.
 
 Lykke til! 🚀
 
-### Datasett
-Vi har en rekke datasett som er lastet opp eller linket til på GitHub, det finner dere [her](https://github.com/uit-sok-3023-v25/uit-sok-3023-v25.github.io/blob/main/data/README.md).
+---
+**Ressurser:**
+- Vi har en rekke datasett som er lastet opp eller linket til på GitHub, det finner dere [her](https://github.com/uit-sok-1305-h26/uit-sok-1305-h26.github.io/blob/main/data/README.md).
+- Det er massevis av data fra pensumboka, som kan henter gjennom Python/R bibliotek [ISLP - Introduction to Statistical Learning (Ressursside)](https://www.statlearning.com/)
