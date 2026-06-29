@@ -2,9 +2,11 @@
 # Sok-1305 Statistisk læring for økonomer   
 
 ## Arbeidskrav
-- I dette kurset har vi et arbeidskrav, det er et oppgaveark om første delen av pensum. Dette skal leveres individuelt.
-- Besvarelsen deres vurderes godkjent/ikke-godkjent, og må gjennomføres for å få ta eksamen i faget.
+- I dette kurset har vi et arbeidskrav, det er en presentasjon av prosjektbeskrivelsen knyttet til prosjektet.
+- Dere skal i løpet av 5-10 minutter presentere til foreleser hva gruppen har tenkt å gjøre i prosjektet, datasett, metoder og mulighet for diskusjon av fremgangsmåter.
+- Presentasjonen deres vurderes godkjent/ikke-godkjent, og må gjennomføres for å få ta eksamen i faget.
 - Arbeidskrav er obligatorisk, men inngår ikke i karaktergrunnlaget.
+- Gjøres enten i grupper på to, eller individuelt.
 
 ## Karakter
 - I dette kurset er det to arbeid som er karaktergivende.
@@ -16,7 +18,7 @@
 
 | Type oppgave   | Innleveringsfrist | Hvordan |Vurdering |
 |------------------------------------|-------------------|-----------|-----------|
-|Oppgaveark  |  10. september  | Canvas-innlevering   |Godkjent/Ikke-godkjent|
+|Presentasjon av prosjektbeskrivelse  |  10. september  | Muntlig fysisk   |Godkjent/Ikke-godkjent|
 |Innlevering av prosjekt| 23.11 kl. 14.00    | [Wiseflow](https://europe.wiseflow.net/participant/)    |40% av karaktergrunnlag|
 |Muntlig eksamen| xx.xx og xx.xx     | Fysisk på campus    |60% av karaktergrunnlag|
 
