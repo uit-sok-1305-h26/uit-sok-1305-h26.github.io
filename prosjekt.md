@@ -84,4 +84,4 @@ Lykke til! 🚀
 ---
 **Ressurser:**
 - Vi har en rekke datasett som er lastet opp eller linket til på GitHub, det finner dere [her](https://github.com/uit-sok-1305-h26/uit-sok-1305-h26.github.io/blob/main/data/README.md).
-- Det er massevis av data fra pensumboka, som kan henter gjennom Python/R bibliotek [ISLP - Introduction to Statistical Learning (Ressursside)](https://www.statlearning.com/)
+- Det er massevis av data som kan hentes gjennom Python/R bibliotek knyttet til pensumboka [ISLP - Introduction to Statistical Learning (Ressursside)](https://www.statlearning.com/)
