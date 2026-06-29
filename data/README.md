@@ -10,10 +10,7 @@ Vi vil også legge ut noen datasett dere kan bruke i oppgaven deres.
 * *Loan Approval Classification Dataset*, datasett som kan brukes til binær klassifikasjon for å se om et lån blir akseptert eller ikke. Lenke til datasettet finnes [her](https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data).
 * *Student performance*, et datasett om studenters prestasjoner. Lenke til datasettet finnes [her](https://www.kaggle.com/datasets/muhammadroshaanriaz/students-performance-dataset-cleaned).
 * *Bildeklassifisering*, et datasett om hunder og katter. Ikke særlig økonomisk data, men krevende kode-vinkling. Lenke til datasettet finnes [her](https://www.kaggle.com/datasets/samuelcortinhas/cats-and-dogs-image-classification).
-* *Bildeklassifisering*, et datasett om grønnsaker. Klassifiseringsoppgave med flere klasser. Lenke til datasettet finnes [her](https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset).
-* *Bildeklassifisering*, et datasett som inneholder eksempler på **ekte** bilder av ansikt, og **falsk** genererte bilder. Lenke til datasettet finnes [her](https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces).
 * *Helsedata*, et datasett som handler om helseforsikring, og personlige attributter og pris av forsikring. Lenke til datasettet [her](https://www.kaggle.com/datasets/willianoliveiragibin/healthcare-insurance).
-* **Spennende bildeklassifisering**, et datasett som inneholder amerikansk tegnspråk. Her kan man f.eks. lage en modell som predikerer hva et bilde av en hånd betyr på tegnspråk. Lenke til datasettet [her](https://www.kaggle.com/datasets/esfiam/american-sign-language-dataset).
 
 ## Kaggle
 Mange av datasettene over bruker *Kaggle.com* - alt dere trenger å gjøre er å lage en bruker der (f.eks. med Gmail) for å laste ned datasett.
@@ -30,7 +27,3 @@ Det viktigste med dataene dere velger å bruke til semesteroppgaven er at det er
 | World Bank – World Development Indicators | Globale økonomiske indikatorer (GDP, inflasjon etc.)| [World Bank](https://databank.worldbank.org/source/world-development-indicators) |
 |World Bank - Andre type data|Statistikk innen utdannelse, kjønn, helse, populasjon|[World Bank](https://databank.worldbank.org/)|
 |ML Repo|Massevis av ulike ML datasett|[UC Irvine Machine Learning Repository](https://archive.ics.uci.edu)|
-
-
-
-
