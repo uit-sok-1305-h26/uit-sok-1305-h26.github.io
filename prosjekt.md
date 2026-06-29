@@ -9,7 +9,6 @@ Dere skal utforske og sammenligne statistiske læringsmetoder og maskinlæringsm
 ### 🔍 Metoder og Statistisk Læring
 Prosjektet skal vise at dere behersker sentrale konsepter fra statistisk læring. Dere skal bruke **minst én to teknikker fra pensum**, som for eksempel:
 - **Trebaserte metoder:** Random Forests, Bagging eller Boosting.
-- **Reguleringsteknikker:** Ridge- og Lasso-regresjon.
 - **Support Vector Machines (SVM).**
 - **Lineær regrejson**: Enkel og multippel
 - **Logitistisk regresjon**
