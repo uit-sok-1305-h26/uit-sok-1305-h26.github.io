@@ -8,7 +8,7 @@ Informasjon om eksamen og prosjektet, samt frister og ressurser, finner dere ogs
 - [Eksamen og informasjon om vurdering](eksamen.html){:target="blank"}   
 
 
-[Timeplan](https://timeplan.uit.no/emne_timeplan.php?sem=25v&module=SOK-3023-1){:target="blank"} for faget på UiT sine sider (OPPDATER).
+[Timeplan](https://tp.educloud.no/uit/app/schedule?semester=26h&scheduleType=course&filterOpen=true&summary=true&pastWeeks=false&tab=calendar&course=SOK-1305%C2%A41){:target="blank"} for faget på UiT sine sider (OPPDATER).
 
 
 ## Kursbeskrivelse 
