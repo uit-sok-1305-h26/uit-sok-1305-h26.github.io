@@ -97,7 +97,7 @@ Bruk gjerne denne inndelingen som disposisjon i notebooken.
 - **Viktig:** standardisering og imputering skal tilpasses på treningssettet og deretter brukes på testsettet.
 
 ### 3. Modellering
-Dere skal bruke **minst to metoder fra pensum**, og minst én av dem skal være en enkel og tolkbar *baseline*:
+Dere skal bruke **minst to metoder fra pensum**, og minst én av dem skal være en enkel og tolkbar (*baseline* modell):
 
 | Baseline (minst én) | Mer fleksibel metode (minst én) |
 |---|---|
