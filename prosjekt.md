@@ -156,6 +156,7 @@ Alle kilder – datasett, litteratur, pakker og kode dere har hentet inspirasjon
 - I tillegg skal dokumentet være **kjørt ut til PDF**. PDF-en er det vi leser og vurderer, så sjekk at alle figurer, tabeller og LaTeX-formler faktisk vises der.
   - *Colab:* Fil → Skriv ut → Lagre som PDF (kjør alle celler først!).
   - *RStudio:* Knit → Knit to PDF.
+  - Det finnes et hav av YouTube videoer som viser hvordan man får en ipynb eller Rmd om til pdf.
 
 **Reproduserbarhet**
 - Notebooken skal kunne kjøres fra topp til bunn uten feil, i Google Colab eller RStudio.
