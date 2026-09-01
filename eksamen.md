@@ -18,18 +18,17 @@
 
 | Type oppgave   | Innleveringsfrist | Hvordan |Vurdering |
 |------------------------------------|-------------------|-----------|-----------|
-|Presentasjon av prosjektbeskrivelse  |  10. september  | Muntlig fysisk   |Godkjent/Ikke-godkjent|
-|Innlevering av prosjekt| 23.11 kl. 14.00    | [Wiseflow](https://europe.wiseflow.net/participant/)    |40% av karaktergrunnlag|
-|Muntlig eksamen| xx.xx og xx.xx     | Fysisk på campus    |60% av karaktergrunnlag|
+|Presentasjon av prosjektbeskrivelse  |  11. eller 14. september  | Muntlig fysisk   |Godkjent/Ikke-godkjent|
+|Innlevering av prosjekt| 23.11 kl. 14.00    | Canvas    |40% av karaktergrunnlag|
+|Muntlig eksamen| 7., 8. og 9. desember     | Fysisk på campus    |60% av karaktergrunnlag|
 
 Prosjekt kan gjøres i alene eller grupper på to. Muntlig eksamen er individuell.
 
 ## Tidspunkt for muntlig eksamen:
-Under er det listet opp **når** dere skal ha deres muntlige eksamen. Det er fordelt ut over dagen xx. og xx. november 2026, og vil foregå på rom FYLL INN.
+Under er det listet opp **når** dere skal ha deres muntlige eksamen. Det er fordelt ut over dagen 7., 8. og 9. Desember 2026, og vil foregå på 02.217 Innovatøren.
 
-Informasjon om hvordan muntlig eksamen vil foregå finner dere 
+Informasjon om hvordan muntlig eksamen vil foregå finner dere [her, men lenke kommer snart!].
 
 **Obs**: Husk å ta med gyldig legitimasjon! Møt opp i god tid før din eksaminasjon, minst 10 minutter før.
-
 
 Lykke til!
