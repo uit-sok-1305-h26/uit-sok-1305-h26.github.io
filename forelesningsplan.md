@@ -21,18 +21,18 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 | 02.09.2026 10:15-12:00  | Forelesning 8: Resampling-teknikker, kryssvalidering og bootstrap |[Kryssvalidering](https://youtu.be/6eWODQJrMKs?si=W6X3nS5oOjLktMYZ)/[K-fold CV](https://youtu.be/AMfvd_hLssE?si=rkeI6q7620O64gBE)/[Videre diskusjon av CV](https://youtu.be/jgoa28FR__Y?si=1V5k37YKBh8cfWOy)/[Bootstrap intro](https://youtu.be/h_LweqiIotE?si=VuKyCHltiQHn-smo)/[Bootstrap i dybden](https://youtu.be/OKREmw6YP64?si=53Zh4prK97Wli5Wn)     | Video kommer   | Kapittel 5   |               |
 | 02.09.2026 14:15-16:00  | Seminar 3: Klassifikasjon | [Viktige spørsmål](https://www.youtube.com/watch?v=50sv4UTjE90&list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ&index=16)/[Ekstra om log. regresjon](https://youtu.be/sYDDk6R-be0?si=vM1e6CevTluFHdzV)/[Koding av log. regresjon](https://youtu.be/wOGBlLLuc4I?si=qSE3mev8DyMjK72p) |   |    |   |
 | 07.09.2026 14:15-16:00  | Forelesning 9: Resampling-teknikker, kryssvalidering og bootstrap |[Kryssvalidering](https://youtu.be/6eWODQJrMKs?si=W6X3nS5oOjLktMYZ)/[K-fold CV](https://youtu.be/AMfvd_hLssE?si=rkeI6q7620O64gBE)/[Videre diskusjon av CV](https://youtu.be/jgoa28FR__Y?si=1V5k37YKBh8cfWOy)/[Bootstrap intro](https://youtu.be/h_LweqiIotE?si=VuKyCHltiQHn-smo)/[Bootstrap i dybden](https://youtu.be/OKREmw6YP64?si=53Zh4prK97Wli5Wn)     | Video kommer   | Kapittel 5   |         |
-| 09.09.2026 12:15-14:00  | Forelesning 8: Beslutningstrær, pruning |[Decision trees](https://youtu.be/QNnayf--_yk?si=qxFHL5bHNHOBCNEC)/[Mer om trær](https://youtu.be/JaoTOfTNOVk?si=ag7YOsIvr4glKfi2)/[Klassifikasjonstrær](https://youtu.be/gLcfKSMKOb0?si=QCb3iY7661r01omZ)        | Video kommer  | Kapittel 8   |         |
+| 09.09.2026 12:15-14:00  | Forelesning 10: Beslutningstrær, pruning |[Decision trees](https://youtu.be/QNnayf--_yk?si=qxFHL5bHNHOBCNEC)/[Mer om trær](https://youtu.be/JaoTOfTNOVk?si=ag7YOsIvr4glKfi2)/[Klassifikasjonstrær](https://youtu.be/gLcfKSMKOb0?si=QCb3iY7661r01omZ)        | Video kommer  | Kapittel 8   |         |
 | 10.09.2026 14:15-16:00  | Seminar 4: CV, LOOCV, bootstrap  | [Koding CV](https://youtu.be/oYzo95sFoSY?si=Dm7vYhmNLNR91a-w)/[Koding bootstrap](https://youtu.be/1BxtC6ZOvJQ?si=c5jZissS-GRjKCCo)   |        | Oppgaveark   |         |
-| 14.09.2026 10:15-12:00  | Forelesning 9: Bagging, Random Forests og Boosting      | [Bagging](https://youtu.be/_cKAxjnInfA?si=QmLMMXBIfB0nQh0s)/[Boosting](https://youtu.be/cdl4C2eCOHk?si=MpJ12rbtoSbyeMU5)     | Video kommer       | Kapittel 8   |         |
-| Opptak                | Opptak  | Forelesning 10: Bagging, Random Forests og Boosting     |       | Video kommer      | Kapittel 8   |         |
+| 14.09.2026 10:15-12:00  | Forelesning 11: Bagging, Random Forests og Boosting      | [Bagging](https://youtu.be/_cKAxjnInfA?si=QmLMMXBIfB0nQh0s)/[Boosting](https://youtu.be/cdl4C2eCOHk?si=MpJ12rbtoSbyeMU5)     | Video kommer       | Kapittel 8   |         |
+| Opptak                | Opptak  | Forelesning 12: Bagging, Random Forests og Boosting     |       | Video kommer      | Kapittel 8   |         |
 | EGENSTUDIUM  | Seminar 5: Oppgaver   | [Koding med tre-baserte metoder](https://youtu.be/AVTfC5WnDTo?si=mfpFdoQKN6S6upto)  |   | Oppgaveark   |         |
-| 06.10.2026 12:15-14:00  (Ekstern foreleser) | Forelesning 11: Support vector machines   | [Hyperplan](https://youtu.be/Op0OyOuDjcQ?si=g7G7pz9_EhyuJIxe)  | Video kommer   | Kapittel 9   |         |
-| 13.10.2026 12:15-14:00  (Ekstern foreleser) | Forelesning 12: SVM, SVC, hyperplan  | [Support Vector Machines](https://youtu.be/pjvnCEfAswc?si=QaYrGEifMhmmi_iK) / [Feature expansion](https://youtu.be/02icdqOJsH4?si=21oGx-j7PkpAu6mh) / [SVM vs Logistisk Regresjon](https://youtu.be/m5d7-URGnVY?si=HVArWkaVEuDU2W54)  | Video kommer    | Kapittel 9   |         |       |
+| 06.10.2026 12:15-14:00  (Ekstern foreleser) | Forelesning 13: Support vector machines   | [Hyperplan](https://youtu.be/Op0OyOuDjcQ?si=g7G7pz9_EhyuJIxe)  | Video kommer   | Kapittel 9   |         |
+| 13.10.2026 12:15-14:00  (Ekstern foreleser) | Forelesning 14: SVM, SVC, hyperplan  | [Support Vector Machines](https://youtu.be/pjvnCEfAswc?si=QaYrGEifMhmmi_iK) / [Feature expansion](https://youtu.be/02icdqOJsH4?si=21oGx-j7PkpAu6mh) / [SVM vs Logistisk Regresjon](https://youtu.be/m5d7-URGnVY?si=HVArWkaVEuDU2W54)  | Video kommer    | Kapittel 9   |         |       |
 | Uke 42   | Egenstudium, prosjektarbeid     |          |          |         |     |
 | Uke 43     | Egenstudium, prosjektarbeid   |          |          |         |     |
 | 15.11.2026 14:00       | INNLEVERING AV PROSJEKT      | [Wiseflow innlevering](https://europe.wiseflow.net/participant/) |    |   |   |
-| 17.11.2026 12:15-14:00  | Forelesning 14: Repetisjon | Forberedelse til muntlig eksamen  | |   |         |
-| 19.11.2026 12:15-14:00  | Forelesning 15: Repetisjon | Forberedelse til muntlig eksamen  | |   |         |
+| 17.11.2026 12:15-14:00  | Forelesning 15: Repetisjon | Forberedelse til muntlig eksamen  | |   |         |
+| 19.11.2026 12:15-14:00  | Forelesning 16: Repetisjon | Forberedelse til muntlig eksamen  | |   |         |
 | 19.11.2026 14:15-16:00  | Seminar: Spørretime | Forberedelse til muntlig eksamen  | |   |         |
 | 24.11.2026 14:15-16:00  | Prøveeksamen | Forberedelse til muntlig eksamen  | |   |         |
 | 25.11.2026 14:15-16:00  | Øving til muntlig | Forberedelse til muntlig eksamen  | |   |         |
@@ -44,18 +44,3 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 
 ## Prosjektarbeid og egenstudium
 I perioden med prosjektarbeid og egenstudium vil det være mulighet for kontortid med foreleser. Det planlegges direkte sammen med fagansvarlig Markus J. Aase (markus.j.aase@uit.no) og den enkelte gruppe det gjelder. Det vil også settes opp tidslommer hvor jeg vil være tilgjengelig i et forelesningsrom - dette oppdateres fortløpende i semesteret (og vil informeres om her og Canvas:) ).
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
