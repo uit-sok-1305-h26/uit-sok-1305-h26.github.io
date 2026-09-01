@@ -131,7 +131,7 @@ og bruke den til å forklare hva dere faktisk observerer i deres egne resultater
 
 ### 5. Evaluering og sammenligning
 - **Regresjon:** MSE, RMSE og $R^2$, oppgitt for både trenings- og testsett.
-- **Klassifisering:** *accuracy*, presisjon, *recall*, F1 og forvirringsmatrise. Drøft hvilket mål som er viktigst *for akkurat deres problemstilling*.
+- **Klassifisering:** *accuracy*, presisjon, *recall*, F1 og confusion matrix. Drøft hvilket mål som er viktigst *for akkurat deres problemstilling*.
 - Sammenlign modellene i en tabell.
 - Diskuter over- og undertilpasning. Stor forskjell mellom trenings- og testytelse er et signal dere skal kommentere, ikke skjule.
 
