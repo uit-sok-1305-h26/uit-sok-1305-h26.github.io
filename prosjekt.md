@@ -234,8 +234,10 @@ Innleveringen **må** inneholde:
 
 | Milepæl | Frist |
 |---|---|
-| Melde inn gruppe og valgt datasett | [dato] |
-| Veiledning / spørretime | [dato] |
+| Melde inn gruppe og valgt datasett | 10. september 2026 |
+| Presentere prosjektskisse | 10. eller 14. september 2026 (dere må melde ifra når!) |
+| Veiledning / spørretime | Avtal direkte med foreleser, enten i uke 37, 38, 45, 46 eller 47  |
+| Enkle spørsmål | Dette er et selvstendig prosjekt, men enkle spørsmål kan sendes via mail |
 | Innlevering i Canvas | 23. november kl. 14:00 |
 
 ---
