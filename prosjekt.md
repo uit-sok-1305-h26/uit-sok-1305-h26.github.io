@@ -2,7 +2,7 @@
 # 📝 Semesteroppgave i SOK-1305 – Statistisk læring for økonomer
 
 **Teller 40 % av endelig karakter i emnet.**
-**Innleveringsfrist: 23. november kl. 14:00 i Wiseflow.**
+**Innleveringsfrist: 23. november kl. 14:00 i Canvas.**
 
 ---
 
