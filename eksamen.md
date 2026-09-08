@@ -27,8 +27,6 @@ Prosjekt kan gjøres i alene eller grupper på to. Muntlig eksamen er individuel
 ## Tidspunkt for muntlig eksamen:
 Under er det listet opp **når** dere skal ha deres muntlige eksamen. Det er fordelt ut over dagen 7., 8. og 9. Desember 2026, og vil foregå på 02.217 Innovatøren.
 
-Informasjon om hvordan muntlig eksamen vil foregå finner dere [her, men lenke kommer snart!].
-
 **Obs**: Husk å ta med gyldig legitimasjon! Møt opp i god tid før din eksaminasjon, minst 10 minutter før.
 
 Lykke til!
