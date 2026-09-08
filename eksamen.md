@@ -11,7 +11,7 @@
 ## Karakter
 - I dette kurset er det to arbeid som er karaktergivende.
 - Det første er en innlevering av prosjekt. Dette skal være et selvstendig stykke arbeid hvor dere bruker statistisk læring til å løse praktiske problemstillinger. Dere skal skrive en rapport i Google Colab, og mer informasjon om denne innleveringen finner dere [her](https://uit-sok-1305-h26.github.io/prosjekt.html).
-- Til slutt, skal vi ha en muntlig eksamen som varer opptil 30 minutter - den er individuell.  Mer informasjon om muntlig eksamen finner dere på GitHub [her](https://github.com/uit-sok-1305-h26/uit-sok-1305-h26.github.io/tree/main/oral_exam).
+- Til slutt, skal vi ha en muntlig eksamen som varer opptil 30 minutter - den er individuell. Dere vil få **minst to** spørsmål fra en forhåndsdefinert liste, den finner dere [her](https://uit-sok-1305-h26.github.io/oral_exam/SOK_1305_Muntlig_eksamen_Mulige_spørsmål.pdf). Info om hvordan selve muntlig eksamen vil foregå, finner dere [her](https://uit-sok-1305-h26.github.io/oral_exam/Muntlig_eksamen_SOK_1305_H26.pdf)!
 - Innleveringen av maskinlæringsprosjektet og muntlig eksamen teller ulikt, hendholdsvis 40% og 60% hver. Det vil til slutt danner grunnlag for karakter i kurset (A-E, F er stryk).
 - Skriftlig rapport leveres i [Wiseflow](https://europe.wiseflow.net/participant/). Her kan dere laste opp totalt **5 filer**, hvor dere **skal** laste opp en `.ipynb/R-markdwon` fil og datasettet dere bruker (f.eks. `.xlsx` eller `.csv` fil). I tillegg, **skal** dere laste opp besvarelsen som pdf, legge ved eventuelle vedlegg, og/eller andre relevante filer.
 
