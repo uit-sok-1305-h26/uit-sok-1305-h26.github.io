@@ -2775,8 +2775,7 @@ Optimeringen velger derfor å bruke inntekt og krympe gjeldsgrad mot null.<br>
 Grensen blir omtrent en terskel på inntekt, altså nesten loddrett på inntektsaksen.</p>
 <p><strong>Resultatet avhenger av måleenheten.</strong><br>
 I OLS endrer en ny måleenhet bare tallverdien på koeffisienten, mens tilpassede verdier og prediksjoner er de samme.<br>
-I SVC, og i ridge og lasso, endrer måleenheten selve løsningen.<br>
-Med radialkjerne blir problemet like stort, siden <span class="math inline">\(\lVert x-z\rVert^2\)</span> også domineres av inntekt.</p>
+I SVC, og i ridge og lasso, endrer måleenheten selve løsningen.</p>
 <p><strong>Hvorfor kan laben i boka bruke <code>scale = FALSE</code>?</strong><br>
 Der er begge prediktorene simulert fra samme fordeling og har samme skala.<br>
 Med økonomiske data i ulike enheter bør vi standardisere, for eksempel med <code>scale = TRUE</code>.</p>
@@ -3817,222 +3816,221 @@ Kan en rett linje hjelpe, uansett <code>cost</code>?</p>
 <span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a>**Resultatet avhenger av måleenheten.**  </span>
 <span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a>I OLS endrer en ny måleenhet bare tallverdien på koeffisienten, mens tilpassede verdier og prediksjoner er de samme.  </span>
 <span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a>I SVC, og i ridge og lasso, endrer måleenheten selve løsningen.  </span>
-<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a>Med radialkjerne blir problemet like stort, siden $\lVert x-z\rVert^2$ også domineres av inntekt.  </span>
-<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a>**Hvorfor kan laben i boka bruke `scale = FALSE`?**  </span>
-<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a>Der er begge prediktorene simulert fra samme fordeling og har samme skala.  </span>
-<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a>Med økonomiske data i ulike enheter bør vi standardisere, for eksempel med <span class="in">`scale = TRUE`</span>.  </span>
-<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a>For å kunne *se* marginen standardiserer vi begge prediktorene og tegner grensen $f(x)=0$ og marginene $f(x)=\pm1$ selv.  </span>
-<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a><span class="in">`plot()`</span>-metoden i <span class="in">`e1071`</span> viser ikke marginene, og den bytter dessuten om aksene.  </span>
-<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a>Støttevektorene er markert med en ring.  </span>
-<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-lineaer-svc</span></span>
-<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Samme treningsdata, ulik kostnad ved marginbrudd. Heltrukken linje er beslutningsgrensen, stiplede linjer er marginene, ringer markerer støttevektorer.&quot;</span></span>
-<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 10</span></span>
-<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
-<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a>dat_std <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">inntekt    =</span> <span class="fu">as.numeric</span>(<span class="fu">scale</span>(dat_laan<span class="sc">$</span>inntekt)),</span>
-<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a>                      <span class="at">gjeldsgrad =</span> <span class="fu">as.numeric</span>(<span class="fu">scale</span>(dat_laan<span class="sc">$</span>gjeldsgrad)),</span>
-<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a>                      <span class="at">y          =</span> dat_laan<span class="sc">$</span>y)</span>
-<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a><span class="co"># Tegner punkter, beslutningsgrense f(x) = 0, marginer f(x) = ±1 og støttevektorer</span></span>
-<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a>tegn_svc <span class="ot">&lt;-</span> <span class="cf">function</span>(mod, data, <span class="at">main =</span> <span class="st">&quot;&quot;</span>) {</span>
-<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a>  beta  <span class="ot">&lt;-</span> <span class="fu">drop</span>(<span class="fu">t</span>(mod<span class="sc">$</span>coefs) <span class="sc">%*%</span> mod<span class="sc">$</span>SV)   <span class="co"># beta = sum_i alpha_i * x_i (se forelesning 2)</span></span>
-<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a>  beta0 <span class="ot">&lt;-</span> <span class="sc">-</span>mod<span class="sc">$</span>rho</span>
-<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a>  farge <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>y <span class="sc">==</span> <span class="st">&quot;Mislighold&quot;</span>, <span class="st">&quot;#cc583b&quot;</span>, <span class="st">&quot;#276ca6&quot;</span>)</span>
-<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(data<span class="sc">$</span>inntekt, data<span class="sc">$</span>gjeldsgrad, <span class="at">col =</span> farge, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">asp =</span> <span class="dv">1</span>,</span>
-<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab =</span> <span class="st">&quot;Inntekt (standardisert)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Gjeldsgrad (standardisert)&quot;</span>,</span>
-<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a>       <span class="at">main =</span> main)</span>
-<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (k <span class="cf">in</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>)) {</span>
-<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a>    <span class="fu">abline</span>(<span class="at">a =</span> (k <span class="sc">-</span> beta0) <span class="sc">/</span> beta[<span class="dv">2</span>], <span class="at">b =</span> <span class="sc">-</span>beta[<span class="dv">1</span>] <span class="sc">/</span> beta[<span class="dv">2</span>],</span>
-<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a>           <span class="at">lty =</span> <span class="fu">ifelse</span>(k <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>), <span class="at">lwd =</span> <span class="fu">ifelse</span>(k <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">1</span>))</span>
-<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a>  <span class="fu">points</span>(data[mod<span class="sc">$</span>index, <span class="fu">c</span>(<span class="st">&quot;inntekt&quot;</span>, <span class="st">&quot;gjeldsgrad&quot;</span>)], <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
-<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a>  <span class="fu">legend</span>(<span class="st">&quot;bottomleft&quot;</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">&quot;Mislighold&quot;</span>, <span class="st">&quot;Ingen mislighold&quot;</span>),</span>
-<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;#cc583b&quot;</span>, <span class="st">&quot;#276ca6&quot;</span>), <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">bty =</span> <span class="st">&quot;n&quot;</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
-<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a>mod_lav <span class="ot">&lt;-</span> <span class="fu">svm</span>(y <span class="sc">~</span> inntekt <span class="sc">+</span> gjeldsgrad, <span class="at">data =</span> dat_std, <span class="at">kernel =</span> <span class="st">&quot;linear&quot;</span>,</span>
-<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>               <span class="at">cost =</span> <span class="fl">0.05</span>, <span class="at">scale =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a>mod_hoy <span class="ot">&lt;-</span> <span class="fu">svm</span>(y <span class="sc">~</span> inntekt <span class="sc">+</span> gjeldsgrad, <span class="at">data =</span> dat_std, <span class="at">kernel =</span> <span class="st">&quot;linear&quot;</span>,</span>
-<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a>               <span class="at">cost =</span> <span class="dv">100</span>, <span class="at">scale =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
-<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a><span class="fu">tegn_svc</span>(mod_lav, dat_std, <span class="at">main =</span> <span class="st">&quot;Lav cost: 0,05&quot;</span>)</span>
-<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a><span class="fu">tegn_svc</span>(mod_hoy, dat_std, <span class="at">main =</span> <span class="st">&quot;Høy cost: 100&quot;</span>)</span>
-<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
-<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tab-lav-hoy</span></span>
-<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a>marginbredde <span class="ot">&lt;-</span> <span class="cf">function</span>(mod) {</span>
-<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a>  beta <span class="ot">&lt;-</span> <span class="fu">drop</span>(<span class="fu">t</span>(mod<span class="sc">$</span>coefs) <span class="sc">%*%</span> mod<span class="sc">$</span>SV)</span>
-<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span> <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>(beta<span class="sc">^</span><span class="dv">2</span>))</span>
-<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
-<span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a>  <span class="at">modell                =</span> <span class="fu">c</span>(<span class="st">&quot;Lav cost&quot;</span>, <span class="st">&quot;Høy cost&quot;</span>),</span>
-<span id="cb14-333"><a href="#cb14-333" aria-hidden="true" tabindex="-1"></a>  <span class="at">antall_stottevektorer =</span> <span class="fu">c</span>(mod_lav<span class="sc">$</span>tot.nSV, mod_hoy<span class="sc">$</span>tot.nSV),</span>
-<span id="cb14-334"><a href="#cb14-334" aria-hidden="true" tabindex="-1"></a>  <span class="at">marginbredde          =</span> <span class="fu">round</span>(<span class="fu">c</span>(<span class="fu">marginbredde</span>(mod_lav), <span class="fu">marginbredde</span>(mod_hoy)), <span class="dv">2</span>),</span>
-<span id="cb14-335"><a href="#cb14-335" aria-hidden="true" tabindex="-1"></a>  <span class="at">treningsfeil          =</span> <span class="fu">c</span>(<span class="fu">mean</span>(<span class="fu">predict</span>(mod_lav, dat_std) <span class="sc">!=</span> dat_std<span class="sc">$</span>y),</span>
-<span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">mean</span>(<span class="fu">predict</span>(mod_hoy, dat_std) <span class="sc">!=</span> dat_std<span class="sc">$</span>y))</span>
-<span id="cb14-337"><a href="#cb14-337" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-338"><a href="#cb14-338" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-339"><a href="#cb14-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-340"><a href="#cb14-340" aria-hidden="true" tabindex="-1"></a>**Diskuter:**  </span>
-<span id="cb14-341"><a href="#cb14-341" aria-hidden="true" tabindex="-1"></a>Hvilken modell bruker flest støttevektorer, og hvorfor?  </span>
-<span id="cb14-342"><a href="#cb14-342" aria-hidden="true" tabindex="-1"></a>Hvilken modell vil endre seg mest hvis vi bytter ut ti av søknadene?  </span>
-<span id="cb14-343"><a href="#cb14-343" aria-hidden="true" tabindex="-1"></a>De to modellene har omtrent like mange treningsfeil.  </span>
-<span id="cb14-344"><a href="#cb14-344" aria-hidden="true" tabindex="-1"></a>Hvilken ville du stolt mest på for nye søknader, og hvorfor?  </span>
-<span id="cb14-345"><a href="#cb14-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-346"><a href="#cb14-346" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=&quot;true&quot; title=&quot;Svar: Diskuter&quot;}</span>
-<span id="cb14-347"><a href="#cb14-347" aria-hidden="true" tabindex="-1"></a>**Modellen med lav `cost` har flest støttevektorer.**  </span>
-<span id="cb14-348"><a href="#cb14-348" aria-hidden="true" tabindex="-1"></a>I vår kjøring har modellen med <span class="in">`cost = 0,05`</span> 69 støttevektorer, mens modellen med <span class="in">`cost = 100`</span> har 46.  </span>
-<span id="cb14-349"><a href="#cb14-349" aria-hidden="true" tabindex="-1"></a>Når brudd er billige, lønner det seg å gjøre marginen bred, her omtrent dobbelt så bred.  </span>
-<span id="cb14-350"><a href="#cb14-350" aria-hidden="true" tabindex="-1"></a>Da havner flere punkter på marginen, innenfor den eller på feil side, og alle disse er støttevektorer.  </span>
-<span id="cb14-351"><a href="#cb14-351" aria-hidden="true" tabindex="-1"></a>Med høy <span class="in">`cost`</span> er brudd dyre, marginen blir smal, og færre punkter ligger innenfor.  </span>
-<span id="cb14-352"><a href="#cb14-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-353"><a href="#cb14-353" aria-hidden="true" tabindex="-1"></a>**Modellen med høy `cost` endrer seg mest.**  </span>
-<span id="cb14-354"><a href="#cb14-354" aria-hidden="true" tabindex="-1"></a>Grensen bestemmes bare av støttevektorene.  </span>
-<span id="cb14-355"><a href="#cb14-355" aria-hidden="true" tabindex="-1"></a>Når færre punkter bestemmer grensen, får hvert av dem større innflytelse.  </span>
-<span id="cb14-356"><a href="#cb14-356" aria-hidden="true" tabindex="-1"></a>Bytter vi ut noen av punktene nær den smale marginen, kan linjen vippe merkbart.  </span>
-<span id="cb14-357"><a href="#cb14-357" aria-hidden="true" tabindex="-1"></a>Med lav <span class="in">`cost`</span> er grensen et kompromiss mellom mange punkter, og ti nye søknader flytter den lite.  </span>
-<span id="cb14-358"><a href="#cb14-358" aria-hidden="true" tabindex="-1"></a>Høy <span class="in">`cost`</span> gir altså høy varians, mens lav <span class="in">`cost`</span> gir lav varians og muligens høyere skjevhet.  </span>
-<span id="cb14-359"><a href="#cb14-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-360"><a href="#cb14-360" aria-hidden="true" tabindex="-1"></a>**Hvilken skal vi stole på?**  </span>
-<span id="cb14-361"><a href="#cb14-361" aria-hidden="true" tabindex="-1"></a>Lik treningsfeil sier lite om hvordan modellene gjør det på nye data.  </span>
-<span id="cb14-362"><a href="#cb14-362" aria-hidden="true" tabindex="-1"></a>Alt annet likt taler lav varians for modellen med lav <span class="in">`cost`</span>: den er mer stabil, og den bruker ikke ekstra fleksibilitet til å tilpasse seg støy.  </span>
-<span id="cb14-363"><a href="#cb14-363" aria-hidden="true" tabindex="-1"></a>Men for lav <span class="in">`cost`</span> kan gi en skjev grense, og det ser vi ikke på treningsfeilen heller.  </span>
-<span id="cb14-364"><a href="#cb14-364" aria-hidden="true" tabindex="-1"></a>Det ærlige svaret er at vi ikke bør velge ut fra treningsdata.  </span>
-<span id="cb14-365"><a href="#cb14-365" aria-hidden="true" tabindex="-1"></a>Vi bør velge med kryssvalidering, slik vi gjør i neste avsnitt, der en verdi midt imellom (<span class="in">`cost = 1`</span>) gir lavest CV-feil.  </span>
-<span id="cb14-366"><a href="#cb14-366" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-367"><a href="#cb14-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-368"><a href="#cb14-368" aria-hidden="true" tabindex="-1"></a><span class="fu"># Hvordan velger vi `cost`?</span></span>
-<span id="cb14-369"><a href="#cb14-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-370"><a href="#cb14-370" aria-hidden="true" tabindex="-1"></a>Vi deler data i trening og test.  </span>
-<span id="cb14-371"><a href="#cb14-371" aria-hidden="true" tabindex="-1"></a>På treningsdelen sammenligner vi <span class="in">`cost`</span>-verdier med femfolds kryssvalidering.  </span>
-<span id="cb14-372"><a href="#cb14-372" aria-hidden="true" tabindex="-1"></a>Vi bruker testsettet bare én gang, etter modellvalget.  </span>
-<span id="cb14-373"><a href="#cb14-373" aria-hidden="true" tabindex="-1"></a>Nå bruker vi de *rå* dataene og lar <span class="in">`svm(scale = TRUE)`</span> gjøre skaleringen inne i hver fold.  </span>
-<span id="cb14-374"><a href="#cb14-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-377"><a href="#cb14-377" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb14-378"><a href="#cb14-378" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tune-cost</span></span>
-<span id="cb14-379"><a href="#cb14-379" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">91</span>)</span>
-<span id="cb14-380"><a href="#cb14-380" aria-hidden="true" tabindex="-1"></a>id_train   <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(dat_laan)), <span class="at">size =</span> <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(dat_laan))</span>
-<span id="cb14-381"><a href="#cb14-381" aria-hidden="true" tabindex="-1"></a>train_laan <span class="ot">&lt;-</span> dat_laan[id_train, ]</span>
-<span id="cb14-382"><a href="#cb14-382" aria-hidden="true" tabindex="-1"></a>test_laan  <span class="ot">&lt;-</span> dat_laan[<span class="sc">-</span>id_train, ]</span>
-<span id="cb14-383"><a href="#cb14-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-384"><a href="#cb14-384" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">92</span>)</span>
-<span id="cb14-385"><a href="#cb14-385" aria-hidden="true" tabindex="-1"></a>cv_lin <span class="ot">&lt;-</span> <span class="fu">tune</span>(</span>
-<span id="cb14-386"><a href="#cb14-386" aria-hidden="true" tabindex="-1"></a>  svm, y <span class="sc">~</span> ., <span class="at">data =</span> train_laan, <span class="at">kernel =</span> <span class="st">&quot;linear&quot;</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb14-387"><a href="#cb14-387" aria-hidden="true" tabindex="-1"></a>  <span class="at">ranges =</span> <span class="fu">list</span>(<span class="at">cost =</span> <span class="fu">c</span>(<span class="fl">0.01</span>, <span class="fl">0.1</span>, <span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>)),</span>
-<span id="cb14-388"><a href="#cb14-388" aria-hidden="true" tabindex="-1"></a>  <span class="at">tunecontrol =</span> <span class="fu">tune.control</span>(<span class="at">cross =</span> <span class="dv">5</span>)</span>
-<span id="cb14-389"><a href="#cb14-389" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-390"><a href="#cb14-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-391"><a href="#cb14-391" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cv_lin)<span class="sc">$</span>performances   <span class="co"># CV-feil og spredning over fold for hver cost</span></span>
-<span id="cb14-392"><a href="#cb14-392" aria-hidden="true" tabindex="-1"></a>cv_lin<span class="sc">$</span>best.parameters</span>
-<span id="cb14-393"><a href="#cb14-393" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-394"><a href="#cb14-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-397"><a href="#cb14-397" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb14-398"><a href="#cb14-398" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: test-cost</span></span>
-<span id="cb14-399"><a href="#cb14-399" aria-hidden="true" tabindex="-1"></a>pred_lin <span class="ot">&lt;-</span> <span class="fu">predict</span>(cv_lin<span class="sc">$</span>best.model, <span class="at">newdata =</span> test_laan)</span>
-<span id="cb14-400"><a href="#cb14-400" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="at">faktisk =</span> test_laan<span class="sc">$</span>y, <span class="at">predikert =</span> pred_lin)</span>
-<span id="cb14-401"><a href="#cb14-401" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(pred_lin <span class="sc">==</span> test_laan<span class="sc">$</span>y)</span>
-<span id="cb14-402"><a href="#cb14-402" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-403"><a href="#cb14-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-404"><a href="#cb14-404" aria-hidden="true" tabindex="-1"></a>**Diskuter:**  </span>
-<span id="cb14-405"><a href="#cb14-405" aria-hidden="true" tabindex="-1"></a>Se på kolonnen <span class="in">`dispersion`</span>.  </span>
-<span id="cb14-406"><a href="#cb14-406" aria-hidden="true" tabindex="-1"></a>Er forskjellene i CV-feil mellom de beste <span class="in">`cost`</span>-verdiene store i forhold til usikkerheten?  </span>
-<span id="cb14-407"><a href="#cb14-407" aria-hidden="true" tabindex="-1"></a>Hva ville du valgt hvis to verdier var omtrent like gode?  </span>
-<span id="cb14-408"><a href="#cb14-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-409"><a href="#cb14-409" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=&quot;true&quot; title=&quot;Svar: Diskuter&quot;}</span>
-<span id="cb14-410"><a href="#cb14-410" aria-hidden="true" tabindex="-1"></a>**Forskjellene er små i forhold til usikkerheten.**  </span>
-<span id="cb14-411"><a href="#cb14-411" aria-hidden="true" tabindex="-1"></a>I vår kjøring har <span class="in">`cost = 1`</span> lavest CV-feil (0,214), mens <span class="in">`cost = 10`</span> og <span class="in">`cost = 100`</span> ligger på 0,229 og <span class="in">`cost = 0,1`</span> på 0,243.  </span>
-<span id="cb14-412"><a href="#cb14-412" aria-hidden="true" tabindex="-1"></a>Kolonnen <span class="in">`dispersion`</span> er standardavviket i feilraten over de fem foldene, og den ligger rundt 0,11–0,12.  </span>
-<span id="cb14-413"><a href="#cb14-413" aria-hidden="true" tabindex="-1"></a>Standardfeilen til gjennomsnittet er omtrent $0{,}12/\sqrt{5}\approx 0{,}05$.  </span>
-<span id="cb14-414"><a href="#cb14-414" aria-hidden="true" tabindex="-1"></a>Forskjellen mellom den beste og den nest beste er 0,015, langt mindre enn standardfeilen.  </span>
-<span id="cb14-415"><a href="#cb14-415" aria-hidden="true" tabindex="-1"></a>Treningsdelen har 70 observasjoner, så 0,015 tilsvarer omtrent én observasjon.  </span>
-<span id="cb14-416"><a href="#cb14-416" aria-hidden="true" tabindex="-1"></a>Bare <span class="in">`cost = 0,01`</span> (0,443) er tydelig dårligere enn de andre.  </span>
-<span id="cb14-417"><a href="#cb14-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-418"><a href="#cb14-418" aria-hidden="true" tabindex="-1"></a>**Den «beste» verdien er delvis tilfeldig.**  </span>
-<span id="cb14-419"><a href="#cb14-419" aria-hidden="true" tabindex="-1"></a>Med et annet frø i <span class="in">`set.seed()`</span> blir foldene annerledes, og en annen <span class="in">`cost`</span> kan komme ut som best.  </span>
-<span id="cb14-420"><a href="#cb14-420" aria-hidden="true" tabindex="-1"></a>Det vi faktisk lærer, er at alle verdier fra 0,1 til 100 er omtrent like gode, og at 0,01 er for lav.  </span>
-<span id="cb14-421"><a href="#cb14-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-422"><a href="#cb14-422" aria-hidden="true" tabindex="-1"></a>**Velg den enkleste modellen som er omtrent like god.**  </span>
-<span id="cb14-423"><a href="#cb14-423" aria-hidden="true" tabindex="-1"></a>En vanlig tommelfingerregel er *én-standardfeil-regelen* fra kapittel 6.  </span>
-<span id="cb14-424"><a href="#cb14-424" aria-hidden="true" tabindex="-1"></a>Den sier at vi skal velge den mest regulariserte modellen som har CV-feil innenfor én standardfeil fra den beste.  </span>
-<span id="cb14-425"><a href="#cb14-425" aria-hidden="true" tabindex="-1"></a>For SVC er den mest regulariserte modellen den med lavest <span class="in">`cost`</span>, altså bredest margin, flest støttevektorer og lavest varians.  </span>
-<span id="cb14-426"><a href="#cb14-426" aria-hidden="true" tabindex="-1"></a>Her ligger <span class="in">`cost = 0,1`</span> innenfor grensen ($0{,}243 &lt; 0{,}214 + 0{,}05$), så regelen ville valgt den.  </span>
-<span id="cb14-427"><a href="#cb14-427" aria-hidden="true" tabindex="-1"></a>Begrunnelsen er at når dataene ikke skiller mellom modellene, bør vi foretrekke den som er mest stabil.  </span>
-<span id="cb14-428"><a href="#cb14-428" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-429"><a href="#cb14-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-430"><a href="#cb14-430" aria-hidden="true" tabindex="-1"></a>::: {.callout-important title=&quot;En arbeidsregel&quot;}</span>
-<span id="cb14-431"><a href="#cb14-431" aria-hidden="true" tabindex="-1"></a>Skaler innenfor treningsarbeidsflyten.  </span>
-<span id="cb14-432"><a href="#cb14-432" aria-hidden="true" tabindex="-1"></a>Ved kryssvalidering må hver valideringsfold holdes utenfor *både* tilpasning og beregning av skaleringsparametere.  </span>
-<span id="cb14-433"><a href="#cb14-433" aria-hidden="true" tabindex="-1"></a><span class="in">`svm(scale = TRUE)`</span> beregner gjennomsnitt og standardavvik på dataene modellen tilpasses, og bruker de samme tallene ved <span class="in">`predict()`</span>.  </span>
-<span id="cb14-434"><a href="#cb14-434" aria-hidden="true" tabindex="-1"></a>I figuren over standardiserte vi hele datasettet på forhånd; det er greit for illustrasjon, men ikke for modellvalg.  </span>
-<span id="cb14-435"><a href="#cb14-435" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-436"><a href="#cb14-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-437"><a href="#cb14-437" aria-hidden="true" tabindex="-1"></a><span class="fu"># Vurder påstanden</span></span>
-<span id="cb14-438"><a href="#cb14-438" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-439"><a href="#cb14-439" aria-hidden="true" tabindex="-1"></a>::: {.callout-caution title=&quot;En KI-assistent skrev dette – hva er galt?&quot;}</span>
-<span id="cb14-440"><a href="#cb14-440" aria-hidden="true" tabindex="-1"></a>«Med <span class="in">`cost = 100`</span> får vi færre støttevektorer enn med <span class="in">`cost = 0,05`</span>.  </span>
-<span id="cb14-441"><a href="#cb14-441" aria-hidden="true" tabindex="-1"></a>Modellen bygger dermed på færre observasjoner, er enklere og vil derfor være mer robust mot støy i nye data.»  </span>
-<span id="cb14-442"><a href="#cb14-442" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-443"><a href="#cb14-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-444"><a href="#cb14-444" aria-hidden="true" tabindex="-1"></a>Hvilke deler av påstanden stemmer?  </span>
-<span id="cb14-445"><a href="#cb14-445" aria-hidden="true" tabindex="-1"></a>Hvilken konklusjon følger ikke?  </span>
-<span id="cb14-446"><a href="#cb14-446" aria-hidden="true" tabindex="-1"></a>Bruk begrepene skjevhet, varians og margin i svaret.  </span>
-<span id="cb14-447"><a href="#cb14-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-448"><a href="#cb14-448" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=&quot;true&quot; title=&quot;Svar: Hva er galt?&quot;}</span>
-<span id="cb14-449"><a href="#cb14-449" aria-hidden="true" tabindex="-1"></a>**Dette stemmer:**  </span>
-<span id="cb14-450"><a href="#cb14-450" aria-hidden="true" tabindex="-1"></a>Med <span class="in">`cost = 100`</span> får vi færre støttevektorer, i vår kjøring 46 mot 69.  </span>
-<span id="cb14-451"><a href="#cb14-451" aria-hidden="true" tabindex="-1"></a>Det stemmer også at grensen bare bestemmes av støttevektorene.  </span>
-<span id="cb14-452"><a href="#cb14-452" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-453"><a href="#cb14-453" aria-hidden="true" tabindex="-1"></a>**Dette følger ikke:**  </span>
-<span id="cb14-454"><a href="#cb14-454" aria-hidden="true" tabindex="-1"></a>Fra «færre støttevektorer» trekker påstanden to slutninger som går i feil retning: at modellen er enklere, og at den er mer robust.  </span>
-<span id="cb14-455"><a href="#cb14-455" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-456"><a href="#cb14-456" aria-hidden="true" tabindex="-1"></a>*Færre støttevektorer betyr ikke en enklere modell.*  </span>
-<span id="cb14-457"><a href="#cb14-457" aria-hidden="true" tabindex="-1"></a>Her får vi færre støttevektorer *fordi* marginen er smal.  </span>
-<span id="cb14-458"><a href="#cb14-458" aria-hidden="true" tabindex="-1"></a>Høy <span class="in">`cost`</span> gjør brudd dyre, og modellen tilpasser seg treningsdataene tettere.  </span>
-<span id="cb14-459"><a href="#cb14-459" aria-hidden="true" tabindex="-1"></a>Den er altså mer fleksibel, ikke mindre: lav skjevhet, men høy varians.  </span>
-<span id="cb14-460"><a href="#cb14-460" aria-hidden="true" tabindex="-1"></a>Påstanden blander trolig sammen med lasso, der færre ikke-null *koeffisienter* betyr færre variabler og en enklere modell.  </span>
-<span id="cb14-461"><a href="#cb14-461" aria-hidden="true" tabindex="-1"></a>I en SVM handler sparsomheten om *observasjoner*, og alle prediktorene brukes uansett.  </span>
-<span id="cb14-462"><a href="#cb14-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-463"><a href="#cb14-463" aria-hidden="true" tabindex="-1"></a>*Færre støttevektorer betyr ikke mer robusthet.*  </span>
-<span id="cb14-464"><a href="#cb14-464" aria-hidden="true" tabindex="-1"></a>Når grensen hviler på få punkter, får hvert av dem stor innflytelse.  </span>
-<span id="cb14-465"><a href="#cb14-465" aria-hidden="true" tabindex="-1"></a>Flytter eller bytter vi ut noen av punktene nær den smale marginen, kan grensen vippe merkbart.  </span>
-<span id="cb14-466"><a href="#cb14-466" aria-hidden="true" tabindex="-1"></a>Det er nettopp høy varians.  </span>
-<span id="cb14-467"><a href="#cb14-467" aria-hidden="true" tabindex="-1"></a>Med lav <span class="in">`cost`</span> er marginen bred, mange punkter deler på å bestemme grensen, og modellen blir mer stabil.  </span>
-<span id="cb14-468"><a href="#cb14-468" aria-hidden="true" tabindex="-1"></a>Prisen er mulig høyere skjevhet.  </span>
-<span id="cb14-469"><a href="#cb14-469" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-470"><a href="#cb14-470" aria-hidden="true" tabindex="-1"></a>*«Bygger på færre observasjoner» er også misvisende.*  </span>
-<span id="cb14-471"><a href="#cb14-471" aria-hidden="true" tabindex="-1"></a>Alle observasjonene brukes i tilpasningen.  </span>
-<span id="cb14-472"><a href="#cb14-472" aria-hidden="true" tabindex="-1"></a>Det er dem som avgjør hvilke punkter som blir støttevektorer.  </span>
-<span id="cb14-473"><a href="#cb14-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-474"><a href="#cb14-474" aria-hidden="true" tabindex="-1"></a>**Riktig formulering:**  </span>
-<span id="cb14-475"><a href="#cb14-475" aria-hidden="true" tabindex="-1"></a>«Med <span class="in">`cost = 100`</span> får vi smalere margin og færre støttevektorer.  </span>
-<span id="cb14-476"><a href="#cb14-476" aria-hidden="true" tabindex="-1"></a>Modellen tilpasser seg treningsdataene tettere og har lavere skjevhet, men høyere varians.  </span>
-<span id="cb14-477"><a href="#cb14-477" aria-hidden="true" tabindex="-1"></a>Om den er bedre på nye data, må avgjøres med kryssvalidering.»  </span>
-<span id="cb14-478"><a href="#cb14-478" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-479"><a href="#cb14-479" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-480"><a href="#cb14-480" aria-hidden="true" tabindex="-1"></a><span class="fu"># Kort oppsummering og spørsmål</span></span>
-<span id="cb14-481"><a href="#cb14-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-482"><a href="#cb14-482" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Et hyperplan er en flat grense; marginen måler avstand fra grensen til treningspunktene.  </span>
-<span id="cb14-483"><a href="#cb14-483" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Maksimal margin forutsetter at klassene kan skilles og er følsom for enkeltpunkter; myk margin tillater brudd.  </span>
-<span id="cb14-484"><a href="#cb14-484" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Bare støttevektorene bestemmer grensen. Flere støttevektorer gir lavere varians.  </span>
-<span id="cb14-485"><a href="#cb14-485" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span><span class="in">`cost`</span> i R straffer brudd og virker motsatt av bokas $C$. Velg verdien med kryssvalidering på treningsdata.  </span>
-<span id="cb14-486"><a href="#cb14-486" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Skaler prediktorene, og evaluer den valgte modellen på observasjoner den ikke har sett.  </span>
-<span id="cb14-487"><a href="#cb14-487" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-488"><a href="#cb14-488" aria-hidden="true" tabindex="-1"></a>**Til neste gang:** Hva om gruppene ligger som en ring rundt et sentrum?  </span>
-<span id="cb14-489"><a href="#cb14-489" aria-hidden="true" tabindex="-1"></a>Kan en rett linje hjelpe, uansett <span class="in">`cost`</span>?  </span>
-<span id="cb14-490"><a href="#cb14-490" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-491"><a href="#cb14-491" aria-hidden="true" tabindex="-1"></a><span class="fu"># Kilder og kobling til videoene {.unnumbered}</span></span>
-<span id="cb14-492"><a href="#cb14-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-493"><a href="#cb14-493" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*An Introduction to Statistical Learning*, 2. utgave: §9.1 maksimal margin; §9.2 støttevektorklassifikator; §9.6.1 lab.  </span>
-<span id="cb14-494"><a href="#cb14-494" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Video 9.1 «Optimal Separating Hyperplane»: hyperplan og maksimal margin.  </span>
-<span id="cb14-495"><a href="#cb14-495" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Video 9.2 «Support Vector Classifier»: myk margin, bruddbudsjett og standardisering.  </span>
-<span id="cb14-496"><a href="#cb14-496" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>R-koden bygger på kapittel 9-laben med <span class="in">`e1071`</span>, men med egne simulerte lånedata.  </span>
+<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a>**Hvorfor kan laben i boka bruke `scale = FALSE`?**  </span>
+<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a>Der er begge prediktorene simulert fra samme fordeling og har samme skala.  </span>
+<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a>Med økonomiske data i ulike enheter bør vi standardisere, for eksempel med <span class="in">`scale = TRUE`</span>.  </span>
+<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a>For å kunne *se* marginen standardiserer vi begge prediktorene og tegner grensen $f(x)=0$ og marginene $f(x)=\pm1$ selv.  </span>
+<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a><span class="in">`plot()`</span>-metoden i <span class="in">`e1071`</span> viser ikke marginene, og den bytter dessuten om aksene.  </span>
+<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a>Støttevektorene er markert med en ring.  </span>
+<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-lineaer-svc</span></span>
+<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Samme treningsdata, ulik kostnad ved marginbrudd. Heltrukken linje er beslutningsgrensen, stiplede linjer er marginene, ringer markerer støttevektorer.&quot;</span></span>
+<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 10</span></span>
+<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a>dat_std <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">inntekt    =</span> <span class="fu">as.numeric</span>(<span class="fu">scale</span>(dat_laan<span class="sc">$</span>inntekt)),</span>
+<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a>                      <span class="at">gjeldsgrad =</span> <span class="fu">as.numeric</span>(<span class="fu">scale</span>(dat_laan<span class="sc">$</span>gjeldsgrad)),</span>
+<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a>                      <span class="at">y          =</span> dat_laan<span class="sc">$</span>y)</span>
+<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a><span class="co"># Tegner punkter, beslutningsgrense f(x) = 0, marginer f(x) = ±1 og støttevektorer</span></span>
+<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a>tegn_svc <span class="ot">&lt;-</span> <span class="cf">function</span>(mod, data, <span class="at">main =</span> <span class="st">&quot;&quot;</span>) {</span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a>  beta  <span class="ot">&lt;-</span> <span class="fu">drop</span>(<span class="fu">t</span>(mod<span class="sc">$</span>coefs) <span class="sc">%*%</span> mod<span class="sc">$</span>SV)   <span class="co"># beta = sum_i alpha_i * x_i (se forelesning 2)</span></span>
+<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a>  beta0 <span class="ot">&lt;-</span> <span class="sc">-</span>mod<span class="sc">$</span>rho</span>
+<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a>  farge <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>y <span class="sc">==</span> <span class="st">&quot;Mislighold&quot;</span>, <span class="st">&quot;#cc583b&quot;</span>, <span class="st">&quot;#276ca6&quot;</span>)</span>
+<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(data<span class="sc">$</span>inntekt, data<span class="sc">$</span>gjeldsgrad, <span class="at">col =</span> farge, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">asp =</span> <span class="dv">1</span>,</span>
+<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab =</span> <span class="st">&quot;Inntekt (standardisert)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Gjeldsgrad (standardisert)&quot;</span>,</span>
+<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a>       <span class="at">main =</span> main)</span>
+<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (k <span class="cf">in</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>)) {</span>
+<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a>    <span class="fu">abline</span>(<span class="at">a =</span> (k <span class="sc">-</span> beta0) <span class="sc">/</span> beta[<span class="dv">2</span>], <span class="at">b =</span> <span class="sc">-</span>beta[<span class="dv">1</span>] <span class="sc">/</span> beta[<span class="dv">2</span>],</span>
+<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a>           <span class="at">lty =</span> <span class="fu">ifelse</span>(k <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>), <span class="at">lwd =</span> <span class="fu">ifelse</span>(k <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">1</span>))</span>
+<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a>  <span class="fu">points</span>(data[mod<span class="sc">$</span>index, <span class="fu">c</span>(<span class="st">&quot;inntekt&quot;</span>, <span class="st">&quot;gjeldsgrad&quot;</span>)], <span class="at">cex =</span> <span class="fl">1.8</span>)</span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a>  <span class="fu">legend</span>(<span class="st">&quot;bottomleft&quot;</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">&quot;Mislighold&quot;</span>, <span class="st">&quot;Ingen mislighold&quot;</span>),</span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;#cc583b&quot;</span>, <span class="st">&quot;#276ca6&quot;</span>), <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">bty =</span> <span class="st">&quot;n&quot;</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a>mod_lav <span class="ot">&lt;-</span> <span class="fu">svm</span>(y <span class="sc">~</span> inntekt <span class="sc">+</span> gjeldsgrad, <span class="at">data =</span> dat_std, <span class="at">kernel =</span> <span class="st">&quot;linear&quot;</span>,</span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a>               <span class="at">cost =</span> <span class="fl">0.05</span>, <span class="at">scale =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>mod_hoy <span class="ot">&lt;-</span> <span class="fu">svm</span>(y <span class="sc">~</span> inntekt <span class="sc">+</span> gjeldsgrad, <span class="at">data =</span> dat_std, <span class="at">kernel =</span> <span class="st">&quot;linear&quot;</span>,</span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a>               <span class="at">cost =</span> <span class="dv">100</span>, <span class="at">scale =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a><span class="fu">tegn_svc</span>(mod_lav, dat_std, <span class="at">main =</span> <span class="st">&quot;Lav cost: 0,05&quot;</span>)</span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a><span class="fu">tegn_svc</span>(mod_hoy, dat_std, <span class="at">main =</span> <span class="st">&quot;Høy cost: 100&quot;</span>)</span>
+<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tab-lav-hoy</span></span>
+<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a>marginbredde <span class="ot">&lt;-</span> <span class="cf">function</span>(mod) {</span>
+<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a>  beta <span class="ot">&lt;-</span> <span class="fu">drop</span>(<span class="fu">t</span>(mod<span class="sc">$</span>coefs) <span class="sc">%*%</span> mod<span class="sc">$</span>SV)</span>
+<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span> <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>(beta<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a>  <span class="at">modell                =</span> <span class="fu">c</span>(<span class="st">&quot;Lav cost&quot;</span>, <span class="st">&quot;Høy cost&quot;</span>),</span>
+<span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a>  <span class="at">antall_stottevektorer =</span> <span class="fu">c</span>(mod_lav<span class="sc">$</span>tot.nSV, mod_hoy<span class="sc">$</span>tot.nSV),</span>
+<span id="cb14-333"><a href="#cb14-333" aria-hidden="true" tabindex="-1"></a>  <span class="at">marginbredde          =</span> <span class="fu">round</span>(<span class="fu">c</span>(<span class="fu">marginbredde</span>(mod_lav), <span class="fu">marginbredde</span>(mod_hoy)), <span class="dv">2</span>),</span>
+<span id="cb14-334"><a href="#cb14-334" aria-hidden="true" tabindex="-1"></a>  <span class="at">treningsfeil          =</span> <span class="fu">c</span>(<span class="fu">mean</span>(<span class="fu">predict</span>(mod_lav, dat_std) <span class="sc">!=</span> dat_std<span class="sc">$</span>y),</span>
+<span id="cb14-335"><a href="#cb14-335" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">mean</span>(<span class="fu">predict</span>(mod_hoy, dat_std) <span class="sc">!=</span> dat_std<span class="sc">$</span>y))</span>
+<span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-337"><a href="#cb14-337" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-338"><a href="#cb14-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-339"><a href="#cb14-339" aria-hidden="true" tabindex="-1"></a>**Diskuter:**  </span>
+<span id="cb14-340"><a href="#cb14-340" aria-hidden="true" tabindex="-1"></a>Hvilken modell bruker flest støttevektorer, og hvorfor?  </span>
+<span id="cb14-341"><a href="#cb14-341" aria-hidden="true" tabindex="-1"></a>Hvilken modell vil endre seg mest hvis vi bytter ut ti av søknadene?  </span>
+<span id="cb14-342"><a href="#cb14-342" aria-hidden="true" tabindex="-1"></a>De to modellene har omtrent like mange treningsfeil.  </span>
+<span id="cb14-343"><a href="#cb14-343" aria-hidden="true" tabindex="-1"></a>Hvilken ville du stolt mest på for nye søknader, og hvorfor?  </span>
+<span id="cb14-344"><a href="#cb14-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-345"><a href="#cb14-345" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=&quot;true&quot; title=&quot;Svar: Diskuter&quot;}</span>
+<span id="cb14-346"><a href="#cb14-346" aria-hidden="true" tabindex="-1"></a>**Modellen med lav `cost` har flest støttevektorer.**  </span>
+<span id="cb14-347"><a href="#cb14-347" aria-hidden="true" tabindex="-1"></a>I vår kjøring har modellen med <span class="in">`cost = 0,05`</span> 69 støttevektorer, mens modellen med <span class="in">`cost = 100`</span> har 46.  </span>
+<span id="cb14-348"><a href="#cb14-348" aria-hidden="true" tabindex="-1"></a>Når brudd er billige, lønner det seg å gjøre marginen bred, her omtrent dobbelt så bred.  </span>
+<span id="cb14-349"><a href="#cb14-349" aria-hidden="true" tabindex="-1"></a>Da havner flere punkter på marginen, innenfor den eller på feil side, og alle disse er støttevektorer.  </span>
+<span id="cb14-350"><a href="#cb14-350" aria-hidden="true" tabindex="-1"></a>Med høy <span class="in">`cost`</span> er brudd dyre, marginen blir smal, og færre punkter ligger innenfor.  </span>
+<span id="cb14-351"><a href="#cb14-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-352"><a href="#cb14-352" aria-hidden="true" tabindex="-1"></a>**Modellen med høy `cost` endrer seg mest.**  </span>
+<span id="cb14-353"><a href="#cb14-353" aria-hidden="true" tabindex="-1"></a>Grensen bestemmes bare av støttevektorene.  </span>
+<span id="cb14-354"><a href="#cb14-354" aria-hidden="true" tabindex="-1"></a>Når færre punkter bestemmer grensen, får hvert av dem større innflytelse.  </span>
+<span id="cb14-355"><a href="#cb14-355" aria-hidden="true" tabindex="-1"></a>Bytter vi ut noen av punktene nær den smale marginen, kan linjen vippe merkbart.  </span>
+<span id="cb14-356"><a href="#cb14-356" aria-hidden="true" tabindex="-1"></a>Med lav <span class="in">`cost`</span> er grensen et kompromiss mellom mange punkter, og ti nye søknader flytter den lite.  </span>
+<span id="cb14-357"><a href="#cb14-357" aria-hidden="true" tabindex="-1"></a>Høy <span class="in">`cost`</span> gir altså høy varians, mens lav <span class="in">`cost`</span> gir lav varians og muligens høyere skjevhet.  </span>
+<span id="cb14-358"><a href="#cb14-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-359"><a href="#cb14-359" aria-hidden="true" tabindex="-1"></a>**Hvilken skal vi stole på?**  </span>
+<span id="cb14-360"><a href="#cb14-360" aria-hidden="true" tabindex="-1"></a>Lik treningsfeil sier lite om hvordan modellene gjør det på nye data.  </span>
+<span id="cb14-361"><a href="#cb14-361" aria-hidden="true" tabindex="-1"></a>Alt annet likt taler lav varians for modellen med lav <span class="in">`cost`</span>: den er mer stabil, og den bruker ikke ekstra fleksibilitet til å tilpasse seg støy.  </span>
+<span id="cb14-362"><a href="#cb14-362" aria-hidden="true" tabindex="-1"></a>Men for lav <span class="in">`cost`</span> kan gi en skjev grense, og det ser vi ikke på treningsfeilen heller.  </span>
+<span id="cb14-363"><a href="#cb14-363" aria-hidden="true" tabindex="-1"></a>Det ærlige svaret er at vi ikke bør velge ut fra treningsdata.  </span>
+<span id="cb14-364"><a href="#cb14-364" aria-hidden="true" tabindex="-1"></a>Vi bør velge med kryssvalidering, slik vi gjør i neste avsnitt, der en verdi midt imellom (<span class="in">`cost = 1`</span>) gir lavest CV-feil.  </span>
+<span id="cb14-365"><a href="#cb14-365" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-366"><a href="#cb14-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-367"><a href="#cb14-367" aria-hidden="true" tabindex="-1"></a><span class="fu"># Hvordan velger vi `cost`?</span></span>
+<span id="cb14-368"><a href="#cb14-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-369"><a href="#cb14-369" aria-hidden="true" tabindex="-1"></a>Vi deler data i trening og test.  </span>
+<span id="cb14-370"><a href="#cb14-370" aria-hidden="true" tabindex="-1"></a>På treningsdelen sammenligner vi <span class="in">`cost`</span>-verdier med femfolds kryssvalidering.  </span>
+<span id="cb14-371"><a href="#cb14-371" aria-hidden="true" tabindex="-1"></a>Vi bruker testsettet bare én gang, etter modellvalget.  </span>
+<span id="cb14-372"><a href="#cb14-372" aria-hidden="true" tabindex="-1"></a>Nå bruker vi de *rå* dataene og lar <span class="in">`svm(scale = TRUE)`</span> gjøre skaleringen inne i hver fold.  </span>
+<span id="cb14-373"><a href="#cb14-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-376"><a href="#cb14-376" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-377"><a href="#cb14-377" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tune-cost</span></span>
+<span id="cb14-378"><a href="#cb14-378" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">91</span>)</span>
+<span id="cb14-379"><a href="#cb14-379" aria-hidden="true" tabindex="-1"></a>id_train   <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(dat_laan)), <span class="at">size =</span> <span class="fl">0.7</span> <span class="sc">*</span> <span class="fu">nrow</span>(dat_laan))</span>
+<span id="cb14-380"><a href="#cb14-380" aria-hidden="true" tabindex="-1"></a>train_laan <span class="ot">&lt;-</span> dat_laan[id_train, ]</span>
+<span id="cb14-381"><a href="#cb14-381" aria-hidden="true" tabindex="-1"></a>test_laan  <span class="ot">&lt;-</span> dat_laan[<span class="sc">-</span>id_train, ]</span>
+<span id="cb14-382"><a href="#cb14-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-383"><a href="#cb14-383" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">92</span>)</span>
+<span id="cb14-384"><a href="#cb14-384" aria-hidden="true" tabindex="-1"></a>cv_lin <span class="ot">&lt;-</span> <span class="fu">tune</span>(</span>
+<span id="cb14-385"><a href="#cb14-385" aria-hidden="true" tabindex="-1"></a>  svm, y <span class="sc">~</span> ., <span class="at">data =</span> train_laan, <span class="at">kernel =</span> <span class="st">&quot;linear&quot;</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb14-386"><a href="#cb14-386" aria-hidden="true" tabindex="-1"></a>  <span class="at">ranges =</span> <span class="fu">list</span>(<span class="at">cost =</span> <span class="fu">c</span>(<span class="fl">0.01</span>, <span class="fl">0.1</span>, <span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>)),</span>
+<span id="cb14-387"><a href="#cb14-387" aria-hidden="true" tabindex="-1"></a>  <span class="at">tunecontrol =</span> <span class="fu">tune.control</span>(<span class="at">cross =</span> <span class="dv">5</span>)</span>
+<span id="cb14-388"><a href="#cb14-388" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-389"><a href="#cb14-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-390"><a href="#cb14-390" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cv_lin)<span class="sc">$</span>performances   <span class="co"># CV-feil og spredning over fold for hver cost</span></span>
+<span id="cb14-391"><a href="#cb14-391" aria-hidden="true" tabindex="-1"></a>cv_lin<span class="sc">$</span>best.parameters</span>
+<span id="cb14-392"><a href="#cb14-392" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-393"><a href="#cb14-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-396"><a href="#cb14-396" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-397"><a href="#cb14-397" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: test-cost</span></span>
+<span id="cb14-398"><a href="#cb14-398" aria-hidden="true" tabindex="-1"></a>pred_lin <span class="ot">&lt;-</span> <span class="fu">predict</span>(cv_lin<span class="sc">$</span>best.model, <span class="at">newdata =</span> test_laan)</span>
+<span id="cb14-399"><a href="#cb14-399" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="at">faktisk =</span> test_laan<span class="sc">$</span>y, <span class="at">predikert =</span> pred_lin)</span>
+<span id="cb14-400"><a href="#cb14-400" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(pred_lin <span class="sc">==</span> test_laan<span class="sc">$</span>y)</span>
+<span id="cb14-401"><a href="#cb14-401" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-402"><a href="#cb14-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-403"><a href="#cb14-403" aria-hidden="true" tabindex="-1"></a>**Diskuter:**  </span>
+<span id="cb14-404"><a href="#cb14-404" aria-hidden="true" tabindex="-1"></a>Se på kolonnen <span class="in">`dispersion`</span>.  </span>
+<span id="cb14-405"><a href="#cb14-405" aria-hidden="true" tabindex="-1"></a>Er forskjellene i CV-feil mellom de beste <span class="in">`cost`</span>-verdiene store i forhold til usikkerheten?  </span>
+<span id="cb14-406"><a href="#cb14-406" aria-hidden="true" tabindex="-1"></a>Hva ville du valgt hvis to verdier var omtrent like gode?  </span>
+<span id="cb14-407"><a href="#cb14-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-408"><a href="#cb14-408" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=&quot;true&quot; title=&quot;Svar: Diskuter&quot;}</span>
+<span id="cb14-409"><a href="#cb14-409" aria-hidden="true" tabindex="-1"></a>**Forskjellene er små i forhold til usikkerheten.**  </span>
+<span id="cb14-410"><a href="#cb14-410" aria-hidden="true" tabindex="-1"></a>I vår kjøring har <span class="in">`cost = 1`</span> lavest CV-feil (0,214), mens <span class="in">`cost = 10`</span> og <span class="in">`cost = 100`</span> ligger på 0,229 og <span class="in">`cost = 0,1`</span> på 0,243.  </span>
+<span id="cb14-411"><a href="#cb14-411" aria-hidden="true" tabindex="-1"></a>Kolonnen <span class="in">`dispersion`</span> er standardavviket i feilraten over de fem foldene, og den ligger rundt 0,11–0,12.  </span>
+<span id="cb14-412"><a href="#cb14-412" aria-hidden="true" tabindex="-1"></a>Standardfeilen til gjennomsnittet er omtrent $0{,}12/\sqrt{5}\approx 0{,}05$.  </span>
+<span id="cb14-413"><a href="#cb14-413" aria-hidden="true" tabindex="-1"></a>Forskjellen mellom den beste og den nest beste er 0,015, langt mindre enn standardfeilen.  </span>
+<span id="cb14-414"><a href="#cb14-414" aria-hidden="true" tabindex="-1"></a>Treningsdelen har 70 observasjoner, så 0,015 tilsvarer omtrent én observasjon.  </span>
+<span id="cb14-415"><a href="#cb14-415" aria-hidden="true" tabindex="-1"></a>Bare <span class="in">`cost = 0,01`</span> (0,443) er tydelig dårligere enn de andre.  </span>
+<span id="cb14-416"><a href="#cb14-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-417"><a href="#cb14-417" aria-hidden="true" tabindex="-1"></a>**Den «beste» verdien er delvis tilfeldig.**  </span>
+<span id="cb14-418"><a href="#cb14-418" aria-hidden="true" tabindex="-1"></a>Med et annet frø i <span class="in">`set.seed()`</span> blir foldene annerledes, og en annen <span class="in">`cost`</span> kan komme ut som best.  </span>
+<span id="cb14-419"><a href="#cb14-419" aria-hidden="true" tabindex="-1"></a>Det vi faktisk lærer, er at alle verdier fra 0,1 til 100 er omtrent like gode, og at 0,01 er for lav.  </span>
+<span id="cb14-420"><a href="#cb14-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-421"><a href="#cb14-421" aria-hidden="true" tabindex="-1"></a>**Velg den enkleste modellen som er omtrent like god.**  </span>
+<span id="cb14-422"><a href="#cb14-422" aria-hidden="true" tabindex="-1"></a>En vanlig tommelfingerregel er *én-standardfeil-regelen* fra kapittel 6.  </span>
+<span id="cb14-423"><a href="#cb14-423" aria-hidden="true" tabindex="-1"></a>Den sier at vi skal velge den mest regulariserte modellen som har CV-feil innenfor én standardfeil fra den beste.  </span>
+<span id="cb14-424"><a href="#cb14-424" aria-hidden="true" tabindex="-1"></a>For SVC er den mest regulariserte modellen den med lavest <span class="in">`cost`</span>, altså bredest margin, flest støttevektorer og lavest varians.  </span>
+<span id="cb14-425"><a href="#cb14-425" aria-hidden="true" tabindex="-1"></a>Her ligger <span class="in">`cost = 0,1`</span> innenfor grensen ($0{,}243 &lt; 0{,}214 + 0{,}05$), så regelen ville valgt den.  </span>
+<span id="cb14-426"><a href="#cb14-426" aria-hidden="true" tabindex="-1"></a>Begrunnelsen er at når dataene ikke skiller mellom modellene, bør vi foretrekke den som er mest stabil.  </span>
+<span id="cb14-427"><a href="#cb14-427" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-428"><a href="#cb14-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-429"><a href="#cb14-429" aria-hidden="true" tabindex="-1"></a>::: {.callout-important title=&quot;En arbeidsregel&quot;}</span>
+<span id="cb14-430"><a href="#cb14-430" aria-hidden="true" tabindex="-1"></a>Skaler innenfor treningsarbeidsflyten.  </span>
+<span id="cb14-431"><a href="#cb14-431" aria-hidden="true" tabindex="-1"></a>Ved kryssvalidering må hver valideringsfold holdes utenfor *både* tilpasning og beregning av skaleringsparametere.  </span>
+<span id="cb14-432"><a href="#cb14-432" aria-hidden="true" tabindex="-1"></a><span class="in">`svm(scale = TRUE)`</span> beregner gjennomsnitt og standardavvik på dataene modellen tilpasses, og bruker de samme tallene ved <span class="in">`predict()`</span>.  </span>
+<span id="cb14-433"><a href="#cb14-433" aria-hidden="true" tabindex="-1"></a>I figuren over standardiserte vi hele datasettet på forhånd; det er greit for illustrasjon, men ikke for modellvalg.  </span>
+<span id="cb14-434"><a href="#cb14-434" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-435"><a href="#cb14-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-436"><a href="#cb14-436" aria-hidden="true" tabindex="-1"></a><span class="fu"># Vurder påstanden</span></span>
+<span id="cb14-437"><a href="#cb14-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-438"><a href="#cb14-438" aria-hidden="true" tabindex="-1"></a>::: {.callout-caution title=&quot;En KI-assistent skrev dette – hva er galt?&quot;}</span>
+<span id="cb14-439"><a href="#cb14-439" aria-hidden="true" tabindex="-1"></a>«Med <span class="in">`cost = 100`</span> får vi færre støttevektorer enn med <span class="in">`cost = 0,05`</span>.  </span>
+<span id="cb14-440"><a href="#cb14-440" aria-hidden="true" tabindex="-1"></a>Modellen bygger dermed på færre observasjoner, er enklere og vil derfor være mer robust mot støy i nye data.»  </span>
+<span id="cb14-441"><a href="#cb14-441" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-442"><a href="#cb14-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-443"><a href="#cb14-443" aria-hidden="true" tabindex="-1"></a>Hvilke deler av påstanden stemmer?  </span>
+<span id="cb14-444"><a href="#cb14-444" aria-hidden="true" tabindex="-1"></a>Hvilken konklusjon følger ikke?  </span>
+<span id="cb14-445"><a href="#cb14-445" aria-hidden="true" tabindex="-1"></a>Bruk begrepene skjevhet, varians og margin i svaret.  </span>
+<span id="cb14-446"><a href="#cb14-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-447"><a href="#cb14-447" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=&quot;true&quot; title=&quot;Svar: Hva er galt?&quot;}</span>
+<span id="cb14-448"><a href="#cb14-448" aria-hidden="true" tabindex="-1"></a>**Dette stemmer:**  </span>
+<span id="cb14-449"><a href="#cb14-449" aria-hidden="true" tabindex="-1"></a>Med <span class="in">`cost = 100`</span> får vi færre støttevektorer, i vår kjøring 46 mot 69.  </span>
+<span id="cb14-450"><a href="#cb14-450" aria-hidden="true" tabindex="-1"></a>Det stemmer også at grensen bare bestemmes av støttevektorene.  </span>
+<span id="cb14-451"><a href="#cb14-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-452"><a href="#cb14-452" aria-hidden="true" tabindex="-1"></a>**Dette følger ikke:**  </span>
+<span id="cb14-453"><a href="#cb14-453" aria-hidden="true" tabindex="-1"></a>Fra «færre støttevektorer» trekker påstanden to slutninger som går i feil retning: at modellen er enklere, og at den er mer robust.  </span>
+<span id="cb14-454"><a href="#cb14-454" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-455"><a href="#cb14-455" aria-hidden="true" tabindex="-1"></a>*Færre støttevektorer betyr ikke en enklere modell.*  </span>
+<span id="cb14-456"><a href="#cb14-456" aria-hidden="true" tabindex="-1"></a>Her får vi færre støttevektorer *fordi* marginen er smal.  </span>
+<span id="cb14-457"><a href="#cb14-457" aria-hidden="true" tabindex="-1"></a>Høy <span class="in">`cost`</span> gjør brudd dyre, og modellen tilpasser seg treningsdataene tettere.  </span>
+<span id="cb14-458"><a href="#cb14-458" aria-hidden="true" tabindex="-1"></a>Den er altså mer fleksibel, ikke mindre: lav skjevhet, men høy varians.  </span>
+<span id="cb14-459"><a href="#cb14-459" aria-hidden="true" tabindex="-1"></a>Påstanden blander trolig sammen med lasso, der færre ikke-null *koeffisienter* betyr færre variabler og en enklere modell.  </span>
+<span id="cb14-460"><a href="#cb14-460" aria-hidden="true" tabindex="-1"></a>I en SVM handler sparsomheten om *observasjoner*, og alle prediktorene brukes uansett.  </span>
+<span id="cb14-461"><a href="#cb14-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-462"><a href="#cb14-462" aria-hidden="true" tabindex="-1"></a>*Færre støttevektorer betyr ikke mer robusthet.*  </span>
+<span id="cb14-463"><a href="#cb14-463" aria-hidden="true" tabindex="-1"></a>Når grensen hviler på få punkter, får hvert av dem stor innflytelse.  </span>
+<span id="cb14-464"><a href="#cb14-464" aria-hidden="true" tabindex="-1"></a>Flytter eller bytter vi ut noen av punktene nær den smale marginen, kan grensen vippe merkbart.  </span>
+<span id="cb14-465"><a href="#cb14-465" aria-hidden="true" tabindex="-1"></a>Det er nettopp høy varians.  </span>
+<span id="cb14-466"><a href="#cb14-466" aria-hidden="true" tabindex="-1"></a>Med lav <span class="in">`cost`</span> er marginen bred, mange punkter deler på å bestemme grensen, og modellen blir mer stabil.  </span>
+<span id="cb14-467"><a href="#cb14-467" aria-hidden="true" tabindex="-1"></a>Prisen er mulig høyere skjevhet.  </span>
+<span id="cb14-468"><a href="#cb14-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-469"><a href="#cb14-469" aria-hidden="true" tabindex="-1"></a>*«Bygger på færre observasjoner» er også misvisende.*  </span>
+<span id="cb14-470"><a href="#cb14-470" aria-hidden="true" tabindex="-1"></a>Alle observasjonene brukes i tilpasningen.  </span>
+<span id="cb14-471"><a href="#cb14-471" aria-hidden="true" tabindex="-1"></a>Det er dem som avgjør hvilke punkter som blir støttevektorer.  </span>
+<span id="cb14-472"><a href="#cb14-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-473"><a href="#cb14-473" aria-hidden="true" tabindex="-1"></a>**Riktig formulering:**  </span>
+<span id="cb14-474"><a href="#cb14-474" aria-hidden="true" tabindex="-1"></a>«Med <span class="in">`cost = 100`</span> får vi smalere margin og færre støttevektorer.  </span>
+<span id="cb14-475"><a href="#cb14-475" aria-hidden="true" tabindex="-1"></a>Modellen tilpasser seg treningsdataene tettere og har lavere skjevhet, men høyere varians.  </span>
+<span id="cb14-476"><a href="#cb14-476" aria-hidden="true" tabindex="-1"></a>Om den er bedre på nye data, må avgjøres med kryssvalidering.»  </span>
+<span id="cb14-477"><a href="#cb14-477" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-478"><a href="#cb14-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-479"><a href="#cb14-479" aria-hidden="true" tabindex="-1"></a><span class="fu"># Kort oppsummering og spørsmål</span></span>
+<span id="cb14-480"><a href="#cb14-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-481"><a href="#cb14-481" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Et hyperplan er en flat grense; marginen måler avstand fra grensen til treningspunktene.  </span>
+<span id="cb14-482"><a href="#cb14-482" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Maksimal margin forutsetter at klassene kan skilles og er følsom for enkeltpunkter; myk margin tillater brudd.  </span>
+<span id="cb14-483"><a href="#cb14-483" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Bare støttevektorene bestemmer grensen. Flere støttevektorer gir lavere varians.  </span>
+<span id="cb14-484"><a href="#cb14-484" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span><span class="in">`cost`</span> i R straffer brudd og virker motsatt av bokas $C$. Velg verdien med kryssvalidering på treningsdata.  </span>
+<span id="cb14-485"><a href="#cb14-485" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Skaler prediktorene, og evaluer den valgte modellen på observasjoner den ikke har sett.  </span>
+<span id="cb14-486"><a href="#cb14-486" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-487"><a href="#cb14-487" aria-hidden="true" tabindex="-1"></a>**Til neste gang:** Hva om gruppene ligger som en ring rundt et sentrum?  </span>
+<span id="cb14-488"><a href="#cb14-488" aria-hidden="true" tabindex="-1"></a>Kan en rett linje hjelpe, uansett <span class="in">`cost`</span>?  </span>
+<span id="cb14-489"><a href="#cb14-489" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-490"><a href="#cb14-490" aria-hidden="true" tabindex="-1"></a><span class="fu"># Kilder og kobling til videoene {.unnumbered}</span></span>
+<span id="cb14-491"><a href="#cb14-491" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-492"><a href="#cb14-492" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*An Introduction to Statistical Learning*, 2. utgave: §9.1 maksimal margin; §9.2 støttevektorklassifikator; §9.6.1 lab.  </span>
+<span id="cb14-493"><a href="#cb14-493" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Video 9.1 «Optimal Separating Hyperplane»: hyperplan og maksimal margin.  </span>
+<span id="cb14-494"><a href="#cb14-494" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Video 9.2 «Support Vector Classifier»: myk margin, bruddbudsjett og standardisering.  </span>
+<span id="cb14-495"><a href="#cb14-495" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>R-koden bygger på kapittel 9-laben med <span class="in">`e1071`</span>, men med egne simulerte lånedata.  </span>
 </code></pre></div><button title="Kopier til utklipstavle" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
