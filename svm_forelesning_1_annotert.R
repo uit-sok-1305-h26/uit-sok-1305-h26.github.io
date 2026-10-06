@@ -168,10 +168,11 @@ data.frame(
 #'
 #' Treningsfeilen skiller altså ikke mellom modellene, men de er likevel svært forskjellige.
 #' Modellen med høy `cost` hviler på færre punkter og vil endre seg mer om dataene endres litt: den har høyere varians.
-#' For å avgjøre hvilken som predikerer best på *nye* søknader, trenger vi data modellen ikke har sett.  
-
+#' For å avgjøre hvilken som predikerer best på *nye* søknader, trenger vi data modellen ikke har sett.
+#' 
+#' 
 #' # 4. Velg `cost` med kryssvalidering  
-#'
+#' 
 #' Nå gjør vi det på ordentlig.
 #' Først deler vi de rå dataene i en treningsdel (70 %) og en testdel (30 %).
 #' Testdelen legger vi til side og rører ikke før helt til slutt.  
@@ -220,7 +221,8 @@ cv_lin$best.parameters
 #' `tune()` velger `cost = 1`, fordi den har lavest CV-feil.
 #' Tallet `3` til venstre er bare radnummeret i rutenettet, ikke en verdi vi skal tolke.
 #' `tune()` har også tilpasset den valgte modellen på nytt på hele treningsdelen; den ligger i `cv_lin$best.model`.
-
+#' 
+#' 
 #' # 5. Én evaluering på testdata
 #'
 #' Til slutt bruker vi den valgte modellen på de 30 søknadene modellen aldri har sett.
