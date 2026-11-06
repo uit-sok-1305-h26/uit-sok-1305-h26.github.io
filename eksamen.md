@@ -33,18 +33,19 @@ Hver kandidat har **30 minutter** til muntlig eksamen, med 5 minutters pause mel
 
 | 7. desember | Kandidat | 8. desember | Kandidat |
 |:---|:---|:---|:---|
-| 09:00–09:30 | Kandidat 1 | 09:00–09:30 | Kandidat 11 |
-| 09:35–10:05 | Kandidat 2 | 09:35–10:05 | Kandidat 12 |
-| 10:10–10:40 | Kandidat 3 | 10:10–10:40 | Kandidat 13 |
-| 10:45–11:15 | Kandidat 4 | 10:45–11:15 | Kandidat 14 |
-| 11:20–11:50 | Kandidat 5 | 11:20–11:50 | Kandidat 15 |
+| 08:25-08:55 | Victor Elias Holm | 08:25-08:55| Tonje V. Bergseth |
+| 09:00–09:30 | Alf Jakob Melbye | 09:00–09:30 | Michael A. Knutsen |
+| 09:35–10:05 | Erlend Høgset | 09:35–10:05 | Torkil Støyl |
+| 10:10–10:40 | Silje L. Skeie | 10:10–10:40 | Eirik Lie-Nikolaisen |
+| 10:45–11:15 | Aksel L. Skjerve | 10:45–11:15 | Torgeir Sjaaeng |
+| 11:20–11:50 | Ruben Opstad-Torheim | 11:20–11:50 | Vincent R. D. Murray |
 | **11:50–12:30** | **Lunsjpause** | **11:50–12:30** | **Lunsjpause** |
-| 12:30–13:00 | Kandidat 6 | 12:30–13:00 | Kandidat 16 |
-| 13:05–13:35 | Kandidat 7 | 13:05–13:35 | Kandidat 17 |
-| 13:40–14:10 | Kandidat 8 | 13:40–14:10 | Kandidat 18 |
-| 14:15–14:45 | Kandidat 9 | 14:15–14:45 | Kandidat 19 |
-| 14:50–15:20 | Kandidat 10 | 14:50–15:20 | Kandidat 20 |
-| **15:30** | **Karakter kunngjøres** | **15:30** | **Karakter kunngjøres** |
+| 12:30–13:00 | Mari Nordhaug Asbjørnsen | 12:30–13:00 | Håkon Vorren |
+| 13:05–13:35 | Marius Aamodt | 13:05–13:35 | Ostoja Stojanovic |
+| 13:40–14:10 | Jesper Dahl | 13:40–14:10 | Anders Pedersen |
+| 14:15–14:45 | Marie A. M. Tønsberg | 14:15–14:45 | Ioana-Alexandra Bica-Pop  |
+| 14:50–15:20 | Christine R. Stiegler | **15:00** | **Karakter kunngjøres** |
+| **15:30** | **Karakter kunngjøres** | **FERDIG** | **JULEFERIE** |
 
 ### Viktig informasjon
 
