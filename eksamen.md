@@ -52,6 +52,6 @@ Hver kandidat har **30 minutter** til muntlig eksamen, med 5 minutters pause mel
 - Møt opp minst **10 minutter før** oppsatt eksamenstidspunkt (det er kjempeviktig at dere er tilgjenglig, i nærheten og enkle å finne). Blir det forsinkelser, påvirker det alle andre og det har vi ikke tid til.
 - Husk å ta med gyldig legitimasjon!
 - Eksamen gjennomføres individuelt.
-- **Karakterer kunngjøres samlet på slutten av hver eksamensdag**, kl. 15:30.
+- **Karakterer kunngjøres samlet på slutten av hver eksamensdag**, se oversikt.
 
 Lykke til!
