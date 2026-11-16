@@ -36,16 +36,15 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 | Uke 43     | Egenstudium, prosjektarbeid   |          |          |         |     |
 | Uke 44     | Egenstudium, prosjektarbeid   |          |          |         |     |
 | 15.11.2026 14:00       | INNLEVERING AV PROSJEKT      | [Wiseflow innlevering](https://europe.wiseflow.net/participant/) |    |   |   |
-| 17.11.2026 12:15-14:00  | Forelesning 15: Repetisjon | Forberedelse til muntlig eksamen  | |   |         |
-| 19.11.2026 12:15-14:00  | Forelesning 16: Repetisjon | Forberedelse til muntlig eksamen  | |   |         |
-| 19.11.2026 14:15-16:00  | Seminar: Spørretime | Forberedelse til muntlig eksamen  | |   |         |
-| 24.11.2026 14:15-16:00  | Prøveeksamen | Forberedelse til muntlig eksamen  | |   |         |
-| 25.11.2026 14:15-16:00  | Øving til muntlig | Forberedelse til muntlig eksamen  | |   |         |
-| 26.11.2026 12:15-14:00  | Spørsmål | Forberedelse til muntlig eksamen  | |   |         |
-| 02.12.2026 14:15-14:00  | Spørsmål | Forberedelse til muntlig eksamen  |Økt i reserve |   |         |
+| 17.11.2026 12:15-14:00  | Forelesning 15: Repetisjon | Forberedelse til muntlig eksamen  | |   | **Utgår pga sykdom!!**        |
+| 19.11.2026 12:15-14:00  | Forelesning 16: Repetisjon | Veiledning av prosjekt  | |   |         |
+| 19.11.2026 14:15-16:00  | Seminar: Spørretime | Veiledning av prosjekt  | |   |         |
+| 24.11.2026 14:15-16:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
+| 25.11.2026 14:15-16:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
+| 26.11.2026 12:15-14:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
+| 30.11.2026 14:15-14:00  | Spørsmål | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   | Reserveøkt (hvis vi trenger)|
 | 07.12.2026            | MUNTLIG EKSAMEN - dag 1 |                |      |              |         |
 | 08.12.2026            | MUNTLIG EKSAMEN - dag 2   |                |      |              |         |
-| 09.12.2026            | MUNTLIG EKSAMEN - dag 3   |                |      |              |         |
 
 ## Prosjektarbeid og egenstudium
 I perioden med prosjektarbeid og egenstudium vil det være mulighet for kontortid med foreleser. Det planlegges direkte sammen med fagansvarlig Markus J. Aase (markus.j.aase@uit.no) og den enkelte gruppe det gjelder. Det vil også settes opp tidslommer hvor jeg vil være tilgjengelig i et forelesningsrom - dette oppdateres fortløpende i semesteret (og vil informeres om her og Canvas:) ).
