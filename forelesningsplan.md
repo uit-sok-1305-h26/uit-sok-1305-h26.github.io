@@ -35,10 +35,10 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 | Uke 42   | Egenstudium, prosjektarbeid     |          |          |         |     |
 | Uke 43     | Egenstudium, prosjektarbeid   |          |          |         |     |
 | Uke 44     | Egenstudium, prosjektarbeid   |          |          |         |     |
-| 15.11.2026 14:00       | INNLEVERING AV PROSJEKT      | [Wiseflow innlevering](https://europe.wiseflow.net/participant/) |    |   |   |
 | 17.11.2026 12:15-14:00  | Forelesning 15: Repetisjon | Forberedelse til muntlig eksamen  | |   | **Utgår pga sykdom!!**        |
 | 19.11.2026 12:15-14:00  | Forelesning 16: Repetisjon | Veiledning av prosjekt  | |   |         |
 | 19.11.2026 14:15-16:00  | Seminar: Spørretime | Veiledning av prosjekt  | |   |         |
+| 23.11.2026 14:00       | INNLEVERING AV PROSJEKT      | **Lever på Canvas!!!**|    |   |   |
 | 24.11.2026 14:15-16:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
 | 25.11.2026 14:15-16:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
 | 26.11.2026 12:15-14:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
