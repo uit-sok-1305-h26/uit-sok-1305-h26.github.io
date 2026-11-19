@@ -40,9 +40,7 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 | 19.11.2026 14:15-16:00  | Seminar: Spørretime | Veiledning av prosjekt  | |   |         |
 | 23.11.2026 14:00       | INNLEVERING AV PROSJEKT      | **Lever på Canvas!!!**|    |   |   |
 | 24.11.2026 14:15-16:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
-| 25.11.2026 14:15-16:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
 | 26.11.2026 12:15-14:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
-| 30.11.2026 14:15-14:00  | Spørsmål | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   | Reserveøkt (hvis vi trenger)|
 | 07.12.2026            | MUNTLIG EKSAMEN - dag 1 |                |      |              |         |
 | 08.12.2026            | MUNTLIG EKSAMEN - dag 2   |                |      |              |         |
 
