@@ -39,8 +39,8 @@ Kommentar: Her kan (og mest sannsynligvis vil) det skje endringer.
 | 19.11.2026 12:15-14:00  | Forelesning 16: Repetisjon | Veiledning av prosjekt  | |   |         |
 | 19.11.2026 14:15-16:00  | Seminar: Spørretime | Veiledning av prosjekt  | |   |         |
 | 23.11.2026 14:00       | INNLEVERING AV PROSJEKT      | **Lever på Canvas!!!**|    |   |   |
-| 24.11.2026 14:15-16:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
-| 26.11.2026 12:15-14:00  | Forberedelse til muntlig eksamen | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
+| 24.11.2026 14:15-16:00  | Forberedelse til muntlig eksamen, repetisjon | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  |[Notater](https://uit-sok-1305-h26.github.io/oppgaver/SOK_1305_Repetisjon.pdf) |   |         |
+| 26.11.2026 12:15-14:00  | Forberedelse til muntlig eksamen, repetisjon | [Spørsmål stilles her](https://forms.gle/PCYJ1q6YpKBg5V2S8)  | |   |         |
 | 07.12.2026            | MUNTLIG EKSAMEN - dag 1 |                |      |              |         |
 | 08.12.2026            | MUNTLIG EKSAMEN - dag 2   |                |      |              |         |
 
